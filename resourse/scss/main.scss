@@ -1,5 +1,9 @@
 @import "add/_mixin_variab";
 @import "1desktop";
+@import "2desktop";
+@import "3desktop";
+@import "4desktop";
+@import "5desktop";
 @import "normalize";
 
 html, body {
@@ -8,37 +12,83 @@ html, body {
 }
 html{
 	font-size: 16px;
+	@include breakpoint(tablet)  {
+		font-size: 14px;
+	}
+	@include breakpoint(phone)  {
+		font-size: 12px;
+	}
 }
 body{
 	position: relative;
 }
 
 
-.footer{
-	flex: 0 0 auto;
-	height: 30px;
-	width: 100%;
-	border: 1px solid red;
-	display: flex;
+.link-for-desktop{
+	height: 1px;
 }
+
+
 .header{
 	position: relative;
 	flex: 0 0 auto;
 	width: 100%;
-	border: 1px solid blue;
+	height: 108px;
 	display: flex;
 	align-items: center;
-	padding:20px 20px 0 20px;
+	padding:20px 2px 0 20px;
+	@include breakpoint(tablet)  {
+		padding:10px 2px 0 10px;
+		height: 70px;
+	}
+	@include breakpoint(phone)  {
+		padding:8px 2px 0 10px;
+		height: 80px;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items:flex-start;
+	}
 }
 .header_logo{
 	height: 100px;
+	flex:0 0 auto;
+	margin-top: 11px;
+
+	@include breakpoint(tablet)  {
+		height:70px;
+	}
+	@include breakpoint(phone)  {
+		height:50px;
+		position: absolute;
+		left: 5px;
+		top: 5px;
+		margin-top: 0;
+	}
 }
 .header_nav{
-	margin-left:170px;
+	flex:1 0 auto;
 	display: flex;
+	justify-content: center;
+	@include breakpoint(phone)  {
+		padding-left:50px;
+		justify-content:space-around;
+		width: 100%;
+	}
 }
 .header_nav-text{
-	margin-left: 25px;;
+	transition: 0.5s ;
+	font-family: "MullerRegular";
+	font-size:0.875rem ;
+	line-height: 1.125rem;
+	margin-left: 34px;
+
+	@include breakpoint(tablet)  {
+		margin-left: 20px;
+	}
+	@include breakpoint(phone)  {
+		margin-left: 10px;
+	}
+
 	color: white;
 	opacity: 0.7;
 	border-bottom:1px dashed white ;
@@ -50,25 +100,79 @@ body{
 		opacity:1;
 	}
 }
+.header_navigation-block{
+	flex:0 0 auto;
+	margin-left:auto;
+	display: flex;
+	padding-left:40px;
+	@include breakpoint(phone)  {
+
+		justify-content: space-between;
+		width: 100%;
+	}
+}
 .header__coins{
 	position: relative;
-	margin-left:170px;
+	margin-right:30px;
+	display: flex;
+	align-items: center;
+	@include breakpoint(tablet)  {
+		margin-right:15px;
+	}
+	@include breakpoint(phone)  {
+		margin-right:5px;
+	}
 }
 .header__coins_image{
-	left: 0;
+	left: 12px;
 	top: 50%;
 	transform:translate(-50%,-50%);
 	height: 70px;
 	position: absolute;
+	@include breakpoint(tablet)  {
+		height:55px;
+	}
+	@include breakpoint(phone)  {
+		height:40px;
+	}
+
 }
 .header__coins_button{
+	transition:  0.8s ;
 	width: 150px;
-	//padding-left:60px;
+	font-family: "UniSansHeavy";
+	font-size:1rem ;
+	line-height: 1;
+	padding-left: 30px;
 	height:45px;
 	border-radius: 43px;
 	background: #df8600;
 	border: none;
 	color: #fff;
+
+	@include breakpoint(tablet)  {
+		width:120px;
+		height:40px;
+	}
+	@include breakpoint(phone)  {
+		width:100px;
+		height:30px;
+	}
+
+	&:hover{
+		background: #fff;
+		color: #df8600;
+		cursor: pointer;
+	}
+	&.color_blue{
+		background: #4ab7c7;
+		color:#fff;
+		&:hover{
+			background:#fff ;
+			color:#4ab7c7;
+			cursor: pointer;
+		}
+	}
 }
 .header__icons{
 	display: flex;
@@ -76,12 +180,55 @@ body{
 	align-items: center;
 }
 .header_nav__icon{
+	transition:  0.5s ;
 	opacity: 0.7;
 	margin-left:9px;
+	width: 30px;
+
+	@include breakpoint(tablet)  {
+		width:25px;
+	}
+	@include breakpoint(phone)  {
+		width:25px;
+	}
+
 	&:hover{
 		opacity: 1;
 	}
 	&.first-icon{
 		margin-left:25px;
+	}
+}
+
+
+
+
+.footer{
+	flex: 0 0 auto;
+	height: 30px;
+	width: 100%;
+	//border: 1px solid red;
+	display: flex;
+	color:white;
+}
+.footer-text1{
+	font-family: "MullerRegular";
+	font-size:0.75rem ;
+	line-height: 1.125rem;
+}
+.footer-text2{
+	z-index: 3;
+	margin-left:auto;
+	display: flex;
+	.footer-text2_ExtraBold{
+		font-family: "MullerExtraBold";
+		font-size:0.75rem ;
+		line-height: 1.125rem;
+	}
+	.footer-text2_MullerRegular{
+		margin-left:3px;
+		font-family: "MullerRegular";
+		font-size:0.75rem ;
+		line-height: 1.125rem;
 	}
 }

@@ -1,0 +1,43 @@
+.page4-tree_cloud{
+  position: absolute;
+  bottom: -95px;
+  right: -248px;
+}
+.content-desktop_page4{
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left:257px;
+  //border: 1px solid red;
+}
+  .page4_menu-item{
+    color:#fff;
+    transition: 1.5s;
+    width: 60%;
+      &:hover{
+        cursor: pointer;
+      }
+      &:hover .page4_menu-title{
+        font-size:5rem ;
+      }
+    }
+
+    .page4_menu-title{
+      font-family: "UniSansHeavy";
+      font-size:3.75rem ;
+      line-height: 1;
+      transition: font-size 0.5s ;
+
+    }
+    .page4_menu-text{
+      transition: height 0.5s ;
+      overflow: hidden;
+      height: 1px;
+
+    }
+    .page4_menu-text_activ{
+      height: 120px;
+      margin:20px 0 10px 0;
+    }
+    .page4_menu-title_activ{
+      font-size:5rem ;
+    }

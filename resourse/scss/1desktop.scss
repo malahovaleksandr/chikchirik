@@ -1,11 +1,212 @@
-.desktop1 {
+.desktop {
+  overflow: hidden;
   position: relative;
   height: 100vh;
   width: 100%;
   background: #4ab7c7;
   display: flex;
   flex-direction: column;
+  justify-content:center;
+
+  @include breakpoint(phone)  {
+    height: 750px;
+  }
+
+  &.background-orange{
+    background: #eda223;
+  }
 }
-.content-desktop1{
-  flex:1 0 auto;
+  .content-desktop{
+    width: 100%;
+    flex:1 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+    .desktop1__cloth1{
+      position: absolute;
+      top: 30px;
+      right: -152px;
+      width: 30%;
+    }
+    .desktop1__cloth2{
+      position: absolute;
+      bottom: 104px;
+      left: -58px;
+      width: 22%;
+    }
+    .desktop1__cloth3{
+      position: absolute;
+      top: 0;
+      left: 183px;
+      width: 11.5%;
+    }
+    .desktop1_content{
+      margin-top: -72px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color:#fff;
+      @include breakpoint(tablet)  {
+        flex-direction: column;
+      }
+      @include breakpoint(phone)  {
+        flex-direction: column;
+      }
+    }
+      .desktop1__title{
+        //width: 25%;
+        width: 307px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+        padding-left: 5px;
+        .desktop1__title1{
+          //font-family: "UniSansThin";
+          font-family: "UniSansThin";
+          font-size:2.375rem ;
+          line-height: 1;
+
+        }
+        .desktop1__title2{
+          font-family: "UniSansHeavy";
+          font-size:4rem ;
+          line-height: 1;
+          font-weight: bold;
+        }
+      }
+    .striped-line{
+      vertical-align: top;
+      //
+      width: 80px;
+      height: 6px;
+      margin:0 15px;
+      overflow: hidden;
+      line-height: 1px;
+      @include breakpoint(tablet)  {
+        width: 1px;
+        height:30px;
+        border-left: 4px dotted white;
+      }
+      @include breakpoint(phone)  {
+        width: 1px;
+        height:30px;
+        border-left: 4px dotted white;
+      }
+    }
+    .desktop1__box-photo{
+    }
+      .desktop1__image{
+        box-shadow: 50px 30px 68px rgba(#000,0.2);
+        width: 290px;
+        @include breakpoint(tablet)  {
+          width: 250px;
+        }
+        @include breakpoint(phone)  {
+          width: 200px;
+        }
+      }
+    .desktop1__description{
+      align-self: flex-end;
+      width: 22%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-family: "MullerRegular";
+      font-size:0.875rem ;
+      line-height: 1.125rem;
+      position: relative;
+      padding-right: 10px;
+      @include breakpoint(tablet)  {
+        align-self: center;
+        width: 60%;
+        position: relative;
+        font-size:1.2rem;
+
+      }
+      @include breakpoint(phone)  {
+        align-self: center;
+        width: 60%;
+        font-size:1.2rem;
+
+      }
+    }
+    .desktop1__description__image{
+      width: 60px;
+      @include breakpoint(tablet)  {
+        position: absolute;
+        width: 50px;
+        top: -38px;
+        left: 0;
+      }
+      @include breakpoint(phone)  {
+        position: absolute;
+        width: 40px;
+        top: -30px;
+        left: 0px;
+      }
+    }
+.desktop1_learn-more{
+  transition:  1s ;
+  position: absolute;
+  left: 50%;
+  bottom:90px;
+  transform: translate(-50%,-50%);
+  width: 230px;
+  height:45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #df8600;
+  border-radius: 23px;
+  border: none;
+  font-family: "UniSansHeavy";
+  font-size:1rem ;
+  line-height: 1;
+  color: #fff;
+  padding-left:30px;
+
+
+  @include breakpoint(phone)  {
+    width: 190px;
+    height:40px;
+    bottom:40px;
+    border-radius: 20px;
+  }
+
+  &:hover{
+    background-color: #fff ;
+    color: #df8600;
+    cursor: pointer;
+  }
+}
+.learn-more-glass{
+  position: absolute;
+  left: 30px;
+  bottom:-45px;
+  width: 65px;
+  transform: translate(-50%,-50%);
+
+}
+.learn-more__arrow_link{
+  position: absolute;
+  left: 50%;
+  bottom:30px;
+  transform: translate(-50%,-50%);
+  @include breakpoint(phone)  {
+    bottom:5px;
+  }
+}
+.desktop1_learn-more__arrow{
+  transition:  0.5s ;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: center;
+  opacity: 0.7;
+  &:hover{
+    opacity: 1;
+  }
 }

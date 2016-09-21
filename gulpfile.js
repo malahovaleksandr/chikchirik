@@ -53,15 +53,15 @@ gulp.task('svg_sprite', function() {
         .pipe(gulp.dest($.config.paths.svg.dist));
 });
 ///подключаем JS c помощью broserfy
-gulp.task('js_process', function() {
-       gulp.src($.config.paths.js.src)
-        .pipe(sourcemaps.init())
-        .pipe(concat('main.js'))
-       .pipe(browserify())
-        .pipe(minify())
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest($.config.paths.js.dist))
-});
+// gulp.task('js_process', function() {
+//        gulp.src($.config.paths.js.src)
+//         .pipe(sourcemaps.init())
+//         .pipe(concat('main.js'))
+//        .pipe(browserify())
+//         .pipe(minify())
+//         .pipe(sourcemaps.write())
+//         .pipe(gulp.dest($.config.paths.js.dist))
+// });
 ///собираем  JS в один файл с мапами
 gulp.task('scripts', function() {
     return gulp.src($.config.paths.js.src)

@@ -1,0 +1,110 @@
+.content-desktop{
+  //border: 1px solid red;
+  &.desktop-page3{
+    padding-left:120px ;
+    padding-right:120px ;
+    justify-content: flex-start;
+    //height: 80%;
+  }
+}
+
+  .page3_arrow-right{
+    transition: opacity 0.8s ;
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translate(0,-50%);
+    opacity: 0.7;
+    &:hover{
+      cursor: pointer;
+      opacity: 1;
+    }
+  }
+  .page3_arrow-left{
+    transition: opacity 0.8s ;
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translate(0,-50%);
+    opacity: 0.7;
+    &:hover{
+      cursor: pointer;
+      opacity: 1;
+    }
+  }
+  .page3_box{
+    position: absolute;
+    left: 50%;
+    bottom: -315px;
+    transform: translate(-50%,-50%);
+  }
+  .page3_content{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: 100%;///это надо убрать и придумать чтоб двигалось
+    height: 400px;
+    align-items: center;
+  }
+
+    .block-cloud{//настройка общая для облака
+      width: 260px;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-end;
+      margin:0 15px;
+      height: 205px;
+      //display: inline-block;
+
+    }
+    .page3_block-description{
+      z-index: 2;
+      color:#eda223;
+    }
+    .block-description_title1{//титул в блоке облака тонкий
+      font-family: "UniSansThin";
+      font-size:1.2rem ;
+      line-height:2rem ;
+    }
+    .block-description_title2{//титул в блоке облака жирный
+      font-family: "UniSansHeavy";
+      font-size:2.1rem ;
+      line-height:1.5rem ;
+    }
+    .block-cloud1{
+      background: url(../image/cloud-lamp.png);
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      padding-bottom:15px;
+      background-size: contain;
+
+      .page3_lamp-text{
+        padding-left: 73px;
+      }
+     }
+    .block-cloud2{
+      background: url(../image/cloud-book.png);
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      margin-bottom:100px;
+      padding-bottom:5px;
+      background-size: contain;
+      .page3_book-text{
+        padding-left: 82px;
+      }
+
+     }
+    .block-cloud3{
+      background: url(../image/cloud-flower.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      margin-top:60px;
+      padding-bottom:15px;
+      .page3_flower-text{
+        padding-left: 75px;
+      }
+
+    }

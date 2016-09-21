@@ -9,7 +9,7 @@
   justify-content:center;
 
   @include breakpoint(phone)  {
-    height: 750px;
+    height: 700px;
   }
 
   &.background-orange{
@@ -88,12 +88,12 @@
       @include breakpoint(tablet)  {
         width: 1px;
         height:30px;
-        border-left: 4px dotted white;
+        border-left: 3px dotted white;
       }
       @include breakpoint(phone)  {
         width: 1px;
         height:30px;
-        border-left: 4px dotted white;
+        border-left: 2px dotted white;
       }
     }
     .desktop1__box-photo{

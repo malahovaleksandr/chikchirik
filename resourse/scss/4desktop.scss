@@ -2,22 +2,37 @@
   position: absolute;
   bottom: -95px;
   right: -248px;
+  width: 580px;
+  @include breakpoint(phone)  {
+    width: 260px;
+    right: -130px;
+  }
 }
 .content-desktop_page4{
   align-items: flex-start;
   flex-direction: column;
   padding-left:257px;
-  //border: 1px solid red;
+  @include breakpoint(phone)  {
+    padding-left:10px;
+  }
 }
   .page4_menu-item{
     color:#fff;
     transition: 1.5s;
     width: 60%;
+
+    @include breakpoint(phone)  {
+      width: 90%;
+    }
+
       &:hover{
         cursor: pointer;
       }
       &:hover .page4_menu-title{
         font-size:5rem ;
+        @include breakpoint(phone)  {
+          font-size:3.5rem ;
+        }
       }
     }
 
@@ -26,6 +41,9 @@
       font-size:3.75rem ;
       line-height: 1;
       transition: font-size 0.5s ;
+      @include breakpoint(phone)  {
+        font-size:2.75rem ;
+      }
 
     }
     .page4_menu-text{
@@ -37,7 +55,13 @@
     .page4_menu-text_activ{
       height: 120px;
       margin:20px 0 10px 0;
+      @include breakpoint(phone)  {
+        height: 130px;
+      }
     }
     .page4_menu-title_activ{
       font-size:5rem ;
+      @include breakpoint(phone)  {
+        font-size:3.5rem ;
+      }
     }

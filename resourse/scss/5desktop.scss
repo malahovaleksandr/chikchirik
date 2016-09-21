@@ -9,6 +9,10 @@
     display: flex;
     align-items: flex-end;
     z-index:4;
+    @include breakpoint(phone)  {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
     .page5_info_cloud-phone{
       margin-left: 108px;
@@ -25,17 +29,39 @@
       color:#eda223;
       padding-left: 110px;
       padding-bottom:35px;
+      @include breakpoint(tablet)  {
+        margin-left: 5px;
+      }
+      @include breakpoint(phone)  {
+        height: 160px;
+        width:270px;
+        margin-left: 5px;
+        padding-left: 90px;
+        margin-bottom: 30px;;
+      }
     }
       .info_cloud-phone_number{
+        transition: 0.5s;
+        color:#eda223;
         font-family: "UniSansThin";
         font-size:1.2rem ;
         line-height: 1;
+        &:hover{
+          color:#4ab7c7;
+          text-shadow: 4px 4px 5px #eda223;
+        }
       }
       .info_cloud-phone_numberMain{
+        transition: 0.5s;
+        color:#eda223;
         font-family: "UniSansHeavy";
         font-size:2.2rem ;
         line-height: 1;
         font-weight: 900;
+        &:hover{
+          color:#4ab7c7;
+          text-shadow: 4px 4px 5px #eda223;
+        }
       }
     .page5_info_cloud-comp{
       margin-left: auto;
@@ -52,12 +78,23 @@
       color:#eda223;
       padding-left: 60px;
       padding-bottom:35px;
+      @include breakpoint(phone)  {
+        width:230px;
+        height: 123px;
+        padding-left: 20px;
+        padding-bottom:10px;
+        margin-left: 55px;
+        margin-bottom:-10px;
+      }
     }
       .info_cloud-comp_public {
         display: flex;
         align-items: flex-end;
         margin-left:115px;
         margin-bottom:10px;
+        @include breakpoint(phone) {
+          margin:0;
+        }
         .comp_public_name {
           font-family: "UniSansHeavy";
           font-size: 1.25rem;
@@ -88,6 +125,11 @@
         line-height: 1;
         font-weight: 900;
         margin-bottom:30px;
+        @include breakpoint(phone)  {
+          margin-bottom:5px;
+          font-size: 1.2rem;
+          line-height: 1.2;
+        }
       }
 
 
@@ -134,14 +176,26 @@
     &.mark1{
       left: 190px;
       top: 120px;
+      @include breakpoint(phone)  {
+        left: 50px;
+        top: 10px;
+      }
     }
     &.mark2{
       left: 580px;
       top: 160px;
+      @include breakpoint(phone)  {
+        left: 10px;
+        top: 55px;
+      }
     }
     &.mark3{
       left: 400px;
       top: 260px;
+      @include breakpoint(phone)  {
+        left: 30px;
+        top: 100px;
+      }
     }
   }
     //.page5_maps_adress_image{

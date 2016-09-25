@@ -1,18 +1,19 @@
 header.header
     img(src="image/logoWhite.png",alt="logo").header_logo
     .header_nav
-        a(href="#desktop-page1")
+        a(href="#1",data-index="1")
             .header_nav-text.active Главная
-        a(href="#desktop-page2")
+        a(href="#2",data-index="2")
             .header_nav-text О нас
-        a(href="#desktop-page3")
+        a(href="#3",data-index="3")
             .header_nav-text А что внутри?
-        a(href="#desktop-page4")
+        a(href="#4",data-index="4")
             .header_nav-text На связи
     .header_navigation-block
         .header__coins
             img(src="image/insert-coin.png",alt="coins").header__coins_image
-            button.header__coins_button.color_blue КУПИТЬ
+            button.header__coins_button.color_blue
+                .hover__button КУПИТЬ
         .header__icons
             a(href="")
                 .header_nav-text Бложек

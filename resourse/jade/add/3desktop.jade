@@ -1,53 +1,82 @@
-.desktop
-    .link-for-deskto#desktop-page3
+section.desktop
+    img(src="image/Box.png", alt="box").page3_box
+
+
+
+    img(src="image/page3_arrow-right.png", alt="arrow-right").page3_arrow.page3_arrow-right
+    img(src="image/page3_arrow-left.png", alt="arrow-left").page3_arrow.page3_arrow-left
+    .link-for-deskto#3
         //header start
     header.header
         img(src="image/logovector.png",alt="logo").header_logo
         .header_nav
-            a(href="#desktop-page1")
+            a(href="#1",data-index="1")
                 .header_nav-text Главная
-            a(href="#desktop-page2")
+            a(href="#2",data-index="2")
                 .header_nav-text О нас
-            a(href="#desktop-page3")
+            a(href="#3",data-index="3")
                 .header_nav-text.active А что внутри?
-            a(href="#desktop-page4")
+            a(href="#4",data-index="4")
                 .header_nav-text На связи
         .header_navigation-block
             .header__coins
                 img(src="image/insert-coin.png",alt="coins").header__coins_image
-                button.header__coins_button КУПИТЬ
+                button.header__coins_button
+                    .hover__button КУПИТЬ
             .header__icons
                 a(href="")
                     .header_nav-text Бложек
-                a(href="")
-                    img(src="image/facebook.png",alt="facebook-logo").header_nav__icon.first-icon
-                a(href="")
-                    img(src="image/instagram.png",alt="instagram-logo").header_nav__icon
-                a(href="")
-                    img(src="image/mail.png",alt="mail-logo").header_nav__icon
+                a(href="https://www.facebook.com/chikchirikkids/", target="_blank")
+                    .header_nav__icon.header_nav__icon-fb.first-icon
+                a(href="https://www.instagram.com/chikchirikkids/",target="_blank")
+                    .header_nav__icon.header_nav__icon-instagram
+                a(href="mailto:CHIKCHIRIKKIDS@GMAIL.COM", target="_blank")
+                    .header_nav__icon.header_nav__icon-mail
             //header end
     .content-desktop.desktop-page3
-        img(src="image/page3_arrow-right.png", alt="arrow-right").page3_arrow.page3_arrow-right
-        img(src="image/page3_arrow-left.png", alt="arrow-left").page3_arrow.page3_arrow-left
-        img(src="image/box.png", alt="box").page3_box
+        img(src="image/page3_dotedLeft.png", alt="box").page3_dotatedLeft
+        img(src="image/page3_dotedCenter.png", alt="box").page3_dotatedCenter
+        img(src="image/page3_dotedRight.png", alt="box").page3_dotatedRight
+
         .page3_content
-            .block-cloud.block-cloud1
-                .page3_block-description.page3_lamp-text
-                    .block-description_title1 ТВОРЧЕСКАЯ
-                    .block-description_title2 ЗАДАНИЯ
+            .page3_content_absoluteBlock.cloud_absolute_left
+                .block-cloud.block-cloud1
+                    .page3_block-description.page3_lamp-text
+                        .block-description_title1 1ТВОРЧЕСКАЯ
+                        .block-description_title2 ЗАДАНИЯ
+
+            .page3_content_absoluteBlock.cloud_absolute_center
+                .block-cloud.block-cloud2
+                    .page3_block-description.page3_book-text
+                        .block-description_title1 2РАЗВИВАЮЩИЕ
+                        .block-description_title2 КНИГИ
 
 
-            .block-cloud.block-cloud2
-                .page3_block-description.page3_book-text
-                    .block-description_title1 РАЗВИВАЮЩИЕ
-                    .block-description_title2 КНИГИ
+            .page3_content_absoluteBlock.cloud_absolute_right
+                .block-cloud.block-cloud3
+                    .page3_block-description.page3_flower-text
+                        .block-description_title1 3РАСТЕНИЯ
+                        .block-description_title2 ИГРУШКИ
+
+            .page3_content_absoluteBlock.cloud_absolute_out_right
+                .block-cloud.block-cloud1
+                    .page3_block-description.page3_lamp-text
+                        .block-description_title1 4ТВОРЧЕСКАЯ
+                        .block-description_title2 ЗАДАНИЯ
 
 
+            .page3_content_absoluteBlock.cloud_absolute_out_left
+                .block-cloud.block-cloud2
+                    .page3_block-description.page3_book-text
+                        .block-description_title1 5РАЗВИВАЮЩИЕ
+                        .block-description_title2 КНИГИ
 
-            .block-cloud.block-cloud3
-                .page3_block-description.page3_flower-text
-                    .block-description_title1 РАСТЕНИЯ
-                    .block-description_title2 ИГРУШКИ
+            .page3_content_absoluteBlock.cloud_absolute_left
+                .block-cloud.block-cloud1
+                    .page3_block-description.page3_lamp-text
+                        .block-description_title1 6ТВОРЧЕСКАЯ
+                        .block-description_title2 ЗАДАНИЯ
+
 
 
 

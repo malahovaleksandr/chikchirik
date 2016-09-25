@@ -1,9 +1,13 @@
+.page1-desktop{
+  align-items: center;
+}
 .desktop {
   overflow: hidden;
   position: relative;
   height: 100vh;
   width: 100%;
-  background: #4ab7c7;
+  background: #76DFED;
+  background: url(../image/back.png);
   display: flex;
   flex-direction: column;
   justify-content:center;
@@ -16,6 +20,7 @@
     background: #eda223;
   }
 }
+
   .content-desktop{
     width: 100%;
     flex:1 0 auto;
@@ -43,8 +48,10 @@
       width: 11.5%;
     }
     .desktop1_content{
+
       margin-top: -72px;
       display: flex;
+      width: 100%;
       justify-content: center;
       align-items: center;
       color:#fff;
@@ -57,22 +64,23 @@
     }
       .desktop1__title{
         //width: 25%;
-        width: 307px;
+        width: 290px;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: justify;
         padding-left: 5px;
         .desktop1__title1{
-          //font-family: "UniSansThin";
+
           font-family: "UniSansThin";
           font-size:2.375rem ;
           line-height: 1;
 
         }
         .desktop1__title2{
+          //font-family: "UniSansHeavy";
           font-family: "UniSansHeavy";
-          font-size:4rem ;
+          font-size:4rem;
           line-height: 1;
           font-weight: bold;
         }
@@ -80,9 +88,9 @@
     .striped-line{
       vertical-align: top;
       //
-      width: 80px;
+      width: 60px;
       height: 6px;
-      margin:0 15px;
+      margin:0 8px;
       overflow: hidden;
       line-height: 1px;
       @include breakpoint(tablet)  {
@@ -110,7 +118,7 @@
       }
     .desktop1__description{
       align-self: flex-end;
-      width: 22%;
+      width: 290px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -121,14 +129,14 @@
       padding-right: 10px;
       @include breakpoint(tablet)  {
         align-self: center;
-        width: 60%;
+        width: 70%;
         position: relative;
         font-size:1.2rem;
 
       }
       @include breakpoint(phone)  {
         align-self: center;
-        width: 60%;
+        width: 70%;
         font-size:1.2rem;
 
       }
@@ -166,6 +174,7 @@
   font-size:1rem ;
   line-height: 1;
   color: #fff;
+  padding:0 ;
   padding-left:30px;
 
 
@@ -200,13 +209,20 @@
   }
 }
 .desktop1_learn-more__arrow{
+
+  height: 28px;
   transition:  0.5s ;
   display: flex;
   flex-direction: column;
   justify-content:flex-start;
   align-items: center;
   opacity: 0.7;
+  width: 15px;
   &:hover{
     opacity: 1;
+  }
+  & img{
+    width: 100%;
+    height: 100%;;
   }
 }

@@ -1,17 +1,24 @@
+.page4_background{
+  background: url(../image/page4background.png);
+  background-size: cover;
+}
 .page4-tree_cloud{
   position: absolute;
   bottom: -95px;
-  right: -248px;
-  width: 580px;
+  right: -20%;
+  width: 50%;
   @include breakpoint(phone)  {
     width: 260px;
-    right: -130px;
+    right: -70px;
+    bottom: -60px;
   }
 }
 .content-desktop_page4{
   align-items: flex-start;
   flex-direction: column;
-  padding-left:257px;
+  justify-content: flex-start;
+  padding-left:235px;
+  padding-top:80px;
   @include breakpoint(phone)  {
     padding-left:10px;
   }

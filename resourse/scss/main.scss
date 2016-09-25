@@ -1,4 +1,5 @@
 @import "add/_mixin_variab";
+@import "add/fonts";
 @import "1desktop";
 @import "2desktop";
 @import "3desktop";
@@ -36,7 +37,7 @@ body{
 	height: 108px;
 	display: flex;
 	align-items: center;
-	padding:20px 2px 0 20px;
+	padding:15px 22px 0 20px;
 	@include breakpoint(tablet)  {
 		padding:10px 2px 0 10px;
 		height: 70px;
@@ -50,9 +51,9 @@ body{
 	}
 }
 .header_logo{
-	height: 100px;
+	height: 102px;
 	flex:0 0 auto;
-	margin-top: 11px;
+	margin-top: 16px;
 
 	@include breakpoint(tablet)  {
 		height:70px;
@@ -106,14 +107,14 @@ body{
 	display: flex;
 	padding-left:40px;
 	@include breakpoint(phone)  {
-
+		padding-left:30px;
 		justify-content: space-between;
 		width: 100%;
 	}
 }
 .header__coins{
 	position: relative;
-	margin-right:30px;
+	margin-right:103px;
 	display: flex;
 	align-items: center;
 	@include breakpoint(tablet)  {
@@ -122,12 +123,15 @@ body{
 	@include breakpoint(phone)  {
 		margin-right:5px;
 	}
+
 }
+
 .header__coins_image{
-	left: 12px;
-	top: 50%;
+	left: 9px;
+	top: 47%;
 	transform:translate(-50%,-50%);
-	height: 70px;
+	height: 72px;
+
 	position: absolute;
 	@include breakpoint(tablet)  {
 		height:55px;
@@ -137,41 +141,59 @@ body{
 	}
 
 }
+
 .header__coins_button{
-	transition:  0.8s ;
-	width: 150px;
+	transition: background  1s ;
+	width: 145px;
 	font-family: "UniSansHeavy";
 	font-size:1rem ;
 	line-height: 1;
+	padding:0;
 	padding-left: 30px;
 	height:45px;
 	border-radius: 43px;
 	background: #df8600;
 	border: none;
-	color: #fff;
 
 	@include breakpoint(tablet)  {
 		width:120px;
 		height:40px;
 	}
 	@include breakpoint(phone)  {
-		width:100px;
+		width:90px;
 		height:30px;
+		padding-left: 20px;
 	}
 
 	&:hover{
 		background: #fff;
-		color: #df8600;
+
 		cursor: pointer;
 	}
-	&.color_blue{
+	&.color_blue { // этот класс для оранжевых страниц
 		background: #4ab7c7;
-		color:#fff;
-		&:hover{
-			background:#fff ;
-			color:#4ab7c7;
+		transition: background 1s;
+		&:hover {
+			background: #fff;
+
 			cursor: pointer;
 		}
+	}
+	&.color_blue .hover__button{// этот класс для оранжевых страниц
+		color:#fff;
+		transition: color 2s;
+		&:hover{
+			color:#4ab7c7;
+		}
+	}
+	&:hover .hover__button{
+		color: #df8600;
+	}
+
+	.hover__button{//этот класс чтоб селать отельно Transition для текста без бэкграунда
+		color: #fff;
+		transition: 2s;
+		line-height: 1;
 	}
 }
 .header__icons{
@@ -180,16 +202,19 @@ body{
 	align-items: center;
 }
 .header_nav__icon{
-	transition:  0.5s ;
+	transition: 0.8s ;
 	opacity: 0.7;
 	margin-left:9px;
 	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background-repeat: no-repeat;
 
 	@include breakpoint(tablet)  {
 		width:25px;
 	}
 	@include breakpoint(phone)  {
-		width:25px;
+		width:30px;
 	}
 
 	&:hover{
@@ -199,14 +224,34 @@ body{
 		margin-left:25px;
 	}
 }
+.header_nav__icon-fb{
 
-
-
+	background: url(../image/facebook.png);
+	&:hover{
+		background: url(../image/facebookHover.png);
+	}
+}
+.header_nav__icon-instagram{
+	background: url(../image/instagram.png);
+	&:hover{
+		background: url(../image/instagramHover.png);
+	}
+}
+.header_nav__icon-mail{
+	background: url(../image/mail.png);
+	&:hover{
+		background: url(../image/mailHover.png);
+	}
+	width: 28px;
+	height: 28px;
+}
 
 .footer{
+	padding-left:19px;
+	padding-right:6px;
 	z-index: 3;
 	flex: 0 0 auto;
-	height: 30px;
+	height: 26px;
 	width: 100%;
 	//border: 1px solid red;
 	display: flex;
@@ -222,14 +267,48 @@ body{
 	margin-left:auto;
 	display: flex;
 	.footer-text2_ExtraBold{
+		color:white;
 		font-family: "MullerExtraBold";
 		font-size:0.75rem ;
 		line-height: 1.125rem;
 	}
 	.footer-text2_MullerRegular{
 		margin-left:3px;
+		color:white;
 		font-family: "MullerRegular";
 		font-size:0.75rem ;
 		line-height: 1.125rem;
 	}
 }
+
+//настройки пагинатора
+//.onepage-pagination{
+//	position: fixed;
+//	right: 0;
+//	top:50%;
+//	z-index: 6;
+//	width:20px;
+//	height: 100px;
+//	border: 1px solid black;
+//
+//	list-style: none;
+//	margin: 0;
+//	padding: 0;
+//	li{
+//		border: 1px solid red;
+//		width:18px;
+//		height: 20px;
+//		padding: 0;
+//		text-align: center;
+//	}
+//	li a{
+//		padding: 10px;
+//		width: 4px;
+//		height: 4px;
+//		display: block;
+//	}
+//}
+//.red{
+//	background: blue;
+//	right:50px;
+//}

@@ -1,32 +1,33 @@
-.desktop.background-orange
-    .link-for-deskto#desktop-page4
+section.desktop.background-orange.page4_background
+    .link-for-deskto#4
     img(src="image/page4_tree.png",alt="tree&cloud").page4-tree_cloud
 
     //header start
     header.header
         img(src="image/logoWhite.png",alt="logo").header_logo
         .header_nav
-            a(href="#desktop-page1")
+            a(href="#1",data-index="1")
                 .header_nav-text Главная
-            a(href="#desktop-page2")
+            a(href="#2",data-index="2")
                 .header_nav-text О нас
-            a(href="#desktop-page3")
+            a(href="#3",data-index="3")
                 .header_nav-text А что внутри?
-            a(href="#desktop-page4")
+            a(href="#4",data-index="4")
                 .header_nav-text.active На связи
         .header_navigation-block
             .header__coins
                 img(src="image/insert-coin.png",alt="coins").header__coins_image
-                button.header__coins_button.color_blue КУПИТЬ
+                button.header__coins_button.color_blue
+                    .hover__button КУПИТЬ
             .header__icons
                 a(href="")
                     .header_nav-text Бложек
-                a(href="")
-                    img(src="image/facebook.png",alt="facebook-logo").header_nav__icon.first-icon
-                a(href="")
-                    img(src="image/instagram.png",alt="instagram-logo").header_nav__icon
-                a(href="")
-                    img(src="image/mail.png",alt="mail-logo").header_nav__icon
+                a(href="https://www.facebook.com/chikchirikkids/", target="_blank")
+                    .header_nav__icon.header_nav__icon-fb.first-icon
+                a(href="https://www.instagram.com/chikchirikkids/",target="_blank")
+                    .header_nav__icon.header_nav__icon-instagram
+                a(href="mailto:CHIKCHIRIKKIDS@GMAIL.COM", target="_blank")
+                    .header_nav__icon.header_nav__icon-mail
             //header end
     .content-desktop.content-desktop_page4
         .page4_menu-item

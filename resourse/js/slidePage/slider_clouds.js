@@ -21,7 +21,7 @@ var arrowRight=$('.page3_arrow-right'),//стрелочка вправо
             }
             var center=i+1,
                 right=i+2,
-                rightOut=i+3, 
+                rightOut=i+3,
                 leftOut=i+4;
 
             if(i==allCloud.length-1) {i=0; }

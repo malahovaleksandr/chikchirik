@@ -10,6 +10,7 @@
 }
 .image_logo_desktop2{
   width: 50%;
+  max-width: 500px;
   display: flex;
   justify-content:flex-end;
   align-items: flex-start;
@@ -20,8 +21,9 @@
     width: 70%;
   }
   .image_desktop2{
-    width: 100%;
+    width: 85%;
     height:auto ;
+    min-width: 280px;
   }
 
 }
@@ -71,10 +73,10 @@
     }
     .page2_bird_on_word{
       position: absolute;
-      right: 200px;
+      left:20%;
       top: -39px;
       @include breakpoint(phone)  {
-        right: 230px;
+        left: 17%;
         top: -42px;
       }
     }

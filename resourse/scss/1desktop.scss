@@ -2,6 +2,7 @@
   align-items: center;
 }
 .desktop {
+ // border: 1px solid red;
   overflow: hidden;
   position: relative;
   height: 100vh;
@@ -11,6 +12,9 @@
   display: flex;
   flex-direction: column;
   justify-content:center;
+  &:nth-last-child{
+    padding-bottom:0;
+  }
 
   @include breakpoint(phone)  {
     height: 700px;
@@ -20,32 +24,46 @@
     background: #eda223;
   }
 }
-
+.link-for-deskto{
+  position: absolute;
+  top: 0;
+}
   .content-desktop{
+    padding-top:108px;
+    padding-bottom:26px;
     width: 100%;
     flex:1 0 auto;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include breakpoint(tablet)  {
+      padding-top:70px;
+    }
+    @include breakpoint(phone)  {
+      padding-top:100px;
+    }
   }
     .desktop1__cloth1{
       position: absolute;
-      top: 30px;
+      top: 80px;
       right: -152px;
       width: 30%;
+      z-index: 11;
     }
     .desktop1__cloth2{
       position: absolute;
       bottom: 104px;
       left: -58px;
       width: 22%;
+      z-index: 5;
     }
     .desktop1__cloth3{
       position: absolute;
-      top: 0;
+      top: 75px;
       left: 183px;
       width: 11.5%;
+      z-index: 11;
     }
     .desktop1_content{
 
@@ -148,12 +166,14 @@
         width: 50px;
         top: -38px;
         left: 0;
+        display: none;
       }
       @include breakpoint(phone)  {
         position: absolute;
         width: 40px;
         top: -30px;
-        left: 0px;
+        left: 0;
+        display: none;
       }
     }
 .desktop1_learn-more{
@@ -218,6 +238,9 @@
   align-items: center;
   opacity: 0.7;
   width: 15px;
+  @include breakpoint(phone)  {
+    display: none;
+  }
   &:hover{
     opacity: 1;
   }

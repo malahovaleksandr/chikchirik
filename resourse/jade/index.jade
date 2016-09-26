@@ -9,7 +9,7 @@ html(lang="en")
         meta( name="keywords", content="loft")
         meta( name="author", content="SanMal")
         meta(name="description", content="chik-chirik")
-        link(href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAGr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEREQAAAAAREREREQAAAREREREREAARERERERERABEREREREREBEREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREQEREREREREQARERERERERAAERERERERAAABERERERAAAAABEREQAAD4HwAA4AcAAMADAACAAQAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAACAAQAAwAMAAOAHAAD4HwAA", rel="icon", type="image/x-icon")
+        //link(href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAGr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEREQAAAAAREREREQAAAREREREREAARERERERERABEREREREREBEREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREREQEREREREREQARERERERERAAERERERERAAABERERERAAAAABEREQAAD4HwAA4AcAAMADAACAAQAAgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAACAAQAAwAMAAOAHAAD4HwAA", rel="icon", type="image/x-icon")
         //link(el="shorcut icon" href="../favicon.ico" type="image/x-icon")
         //link(rel="icon" href="../favicon.ico" type="image/x-icon")
         title CHIKCHIRIK
@@ -17,20 +17,16 @@ html(lang="en")
         block head
 
     body.main
-        //ul.onepage-pagination.red
-        //    li
-        //        a(href="#1",data-index="1").header_nav-text
-        //    li
-        //        a(href="#2",data-index="2").header_nav-text
-        //    li
-        //        a(href="#3",data-index="3").header_nav-text
-        //    li
-        //        a(href="#4",data-index="4").header_nav-text
+        include add/header
+
         include add/1desktop
         include add/2desktop
         include add/3desktop
         include add/4desktop
         include add/5desktop
+
+        include add/footer
+
     script(src="js/jquery.js", type="text/javascript")
     script(src="js/main.js", type="text/javascript")
 

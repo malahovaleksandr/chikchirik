@@ -5,77 +5,66 @@ var arrowRight=$('.page3_arrow-right'),//стрелочка вправо
 
     allCloud=$('.page3_content_absoluteBlock'),//все облака
     conteiner=$('.page3_content'),//контейнер где лежат все облака
-    i=1;//порядковый номер
+    t=1;//порядковый номер
 
         arrowRight.on('click',function(){
-            console.log('right');
-            i++;
-            console.log('номер: '+i);
-            if(i==allCloud.length) {
-                i=0;
-                console.log('обнулили i');
-            }
-            if(i==allCloud.length+1) {
-                i=1;
-                console.log('обнулили i');
-            }
-            var center=i+1,
-                right=i+2,
-                rightOut=i+3, 
-                leftOut=i+4;
+            console.log('номер: '+t);
 
-            if(i==allCloud.length-1) {i=0; }
-            if(center==allCloud.length-1) {center=0; }
-            if(right==allCloud.length-1) {right=0; }
-            if(rightOut==allCloud.length-1) {rightOut=0; }
-            if(leftOut==allCloud.length-1) {leftOut=0; }
+
+            var center=t+1,
+                right=t+2;
+            console.log('center: '+center);
+            console.log('right: '+right);
+
+             if(t==allCloud.length) {t=0; }//обнуляем коефициент t когда выше кол-ва облаков
+            if(center==allCloud.length) {center=0; console.log('center пронизил: '+t)}//редактируем коефициент чтоб не был выше чем колтчество облачков
+            if(center==allCloud.length+1) {center=1; console.log('center пронизил: '+t)}
+             if(right==allCloud.length) {right=0;console.log('right пронизил: '+t) }
+            if(right==allCloud.length+1) {right=1;console.log('right пронизил: '+t) }
+            if(right==allCloud.length+2) {right=2;console.log('right пронизил: '+t) }
+
 
 
             conteiner.find('.cloud_absolute_left').removeClass('cloud_absolute_left');//удаляем классы чтоб облаком поменяло место
             conteiner.find('.cloud_absolute_center').removeClass('cloud_absolute_center');
             conteiner.find('.cloud_absolute_right').removeClass('cloud_absolute_right');
-            conteiner.find('.cloud_absolute_out_right').removeClass('cloud_absolute_out_right');
-            conteiner.find('.cloud_absolute_out_left').removeClass('cloud_absolute_out_left');
 
-            allCloud.eq(i).addClass('cloud_absolute_left');//добавляем класс который переместит облако в нужное новое положение
+            allCloud.eq(t).addClass('cloud_absolute_left');//добавляем класс который переместит облако в нужное новое положение
             allCloud.eq(center).addClass('cloud_absolute_center');
             allCloud.eq(right).addClass('cloud_absolute_right');
-            allCloud.eq(rightOut).addClass('cloud_absolute_out_left');
-            allCloud.eq(leftOut).addClass('cloud_absolute_out_right');
 
+
+             t++;
 
         });
 
         arrowLeft.on('click',function(){
-            console.log('left');
-            console.log('номер: '+i);
-            i--;
-            if(i<0) {
-                i=allCloud.length;
-                console.log('повысили i');
-            }
-            var center=i-1,
-                right=i-2,
-                rightOut=i-3,
-                leftOut=i-4;
 
-            if(i==allCloud.length) {i=allCloud.length; }
-            if(center==allCloud.length) {center=allCloud.length; }
-            if(right==allCloud.length) {right=allCloud.length; }
-            if(rightOut==allCloud.length) {rightOut=allCloud.length; }
-            if(leftOut==allCloud.length) {leftOut=allCloud.length; }
-            
+            if(t<0) {t=allCloud.length-1; }
+            var center=t-1,
+                left=t-2;
+
+
+            if(center==-1) {center=allCloud.length-1; console.log('center пронизил: '+center)}
+            if(center==-2) {center=allCloud.length-2; console.log('center пронизил: '+center)}
+
+            if(left==-1) {left=allCloud.length-1;console.log('left пронизил: '+left) }
+            if(left==-2) {left=allCloud.length-2;console.log('left пронизил: '+left) }
+            if(left==-3) {left=allCloud.length-3;console.log('left пронизил: '+left) }
+
+            console.log('t: '+t);
+            console.log('center: '+center);
+            console.log('left: '+left);
+
             conteiner.find('.cloud_absolute_left').removeClass('cloud_absolute_left');//удаляем классы чтоб облаком поменяло место
             conteiner.find('.cloud_absolute_center').removeClass('cloud_absolute_center');
             conteiner.find('.cloud_absolute_right').removeClass('cloud_absolute_right');
-            conteiner.find('.cloud_absolute_out_right').removeClass('cloud_absolute_out_right');
-            conteiner.find('.cloud_absolute_out_left').removeClass('cloud_absolute_out_left');
 
-            allCloud.eq(i).addClass('cloud_absolute_right');//добавляем класс который переместит облако в нужное новое положение
+            allCloud.eq(t).addClass('cloud_absolute_right');//добавляем класс который переместит облако в нужное новое положение
             allCloud.eq(center).addClass('cloud_absolute_center');
-            allCloud.eq(right).addClass('cloud_absolute_left');
-            allCloud.eq(rightOut).addClass('cloud_absolute_out_right');
-            allCloud.eq(leftOut).addClass('cloud_absolute_out_left');
+            allCloud.eq(left).addClass('cloud_absolute_left');
+
+            t--;
 
 
         });

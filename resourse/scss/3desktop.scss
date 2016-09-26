@@ -127,6 +127,7 @@
   left:50%;
   transform: translate(0,-50%);
   display: inline-block;
+  opacity: 0;
 
   @include breakpoint(phone)  {
     top:50%;
@@ -175,27 +176,27 @@
           transform: translate(-50%,-100%);
         }
       }
-      .cloud_absolute_out_right{
-        left:-100%;
-        top:50%;
-        opacity: 0;
-        z-index:-1;
-        @include breakpoint(phone)  {
-          left:-100%;
-          top:50%;
-
-        }
-      }
-      .cloud_absolute_out_left{
-        left:200%;
-        top:50%;
-        opacity: 0;
-        z-index:-1;
-        @include breakpoint(phone)  {
-          left:200%;
-          top:50%;
-        }
-      }
+      //.cloud_absolute_out_right{
+      //  left:-100%;
+      //  top:50%;
+      //  opacity: 0;
+      //  z-index:-1;
+      //  @include breakpoint(phone)  {
+      //    left:-100%;
+      //    top:50%;
+      //
+      //  }
+      //}
+      //.cloud_absolute_out_left{
+      //  left:200%;
+      //  top:50%;
+      //  opacity: 0;
+      //  z-index:-1;
+      //  @include breakpoint(phone)  {
+      //    left:200%;
+      //    top:50%;
+      //  }
+      //}
 
     .block-cloud{//настройка общая для облака
       width: 260px;

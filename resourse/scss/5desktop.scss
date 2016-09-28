@@ -180,12 +180,16 @@
     z-index: 3;
     color: #eda223;
     .page5_map_mark1_adress{
+      color: #eda223;
       margin-left: 10px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       text-transform: uppercase;
       font-family: "UniSansHeavy";
+      &:hover{
+        color:#4ab7c7;
+      }
 
       line-height: 1;
       font-weight: 900;

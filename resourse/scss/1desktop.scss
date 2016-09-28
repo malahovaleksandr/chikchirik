@@ -38,10 +38,10 @@
     flex-direction: column;
     justify-content: center;
     @include breakpoint(tablet)  {
-      padding-top:70px;
+      padding-top:80px;
     }
     @include breakpoint(phone)  {
-      padding-top:100px;
+      padding-top:108px;
     }
   }
     .desktop1__cloth1{

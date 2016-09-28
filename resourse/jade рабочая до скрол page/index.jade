@@ -17,16 +17,16 @@ html(lang="en")
         block head
 
     body
+        #fullpage
+            include add/header
 
-        include add/header
+            include add/1desktop
+            include add/2desktop
+            include add/3desktop
+            include add/4desktop
+            include add/5desktop
 
-        include add/1desktop
-        include add/2desktop
-        include add/3desktop
-        include add/4desktop
-        include add/5desktop
-
-        include add/footer
+            include add/footer
 
     script(src="js/jquery.js", type="text/javascript")
     script(src="js/main.js", type="text/javascript")

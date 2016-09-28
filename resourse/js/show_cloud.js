@@ -27,7 +27,7 @@ $(document).ready(function(){
 
 	$(document).on('scroll',function(){//функция для смены цвета хедер при скролле страниц
 		var scrollTop=$(window).scrollTop();
-		console.log(heightHeader);
+
 
 		//эти условия срабатывают когда прокрутка опускается до нужного блока и беруться параметры из БД и применяются к нужному кружку
 		if(scrollTop<topPage2){//при прокрутке меняем цвет header и footer
@@ -75,7 +75,7 @@ $(document).ready(function(){
 
 		//эти условия срабатывают когда прокрутка опускается до нужного блока и беруться параметры из БД и применяются к нужному кружку
 		if(scrollTop>=blockCloudBefore){//при прокрутке делаем блоки прозрачными
-			console.log('высота1: '+scrollTop);
+
 
 			for(i=0;i<clouds.length;i++){
 				clouds.eq(i).css('opacity',0);
@@ -88,7 +88,7 @@ $(document).ready(function(){
 
 		//эти условия срабатывают когда прокрутка опускается до нужного блока и беруться параметры из БД и применяются к нужному кружку
 		if(scrollTop>=blockCloud){
-			console.log('высота2: '+scrollTop);
+			
 
 			for(i=0;i<clouds.length;i++){
 				clouds.eq(i).css('opacity',1);

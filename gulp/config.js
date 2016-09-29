@@ -14,7 +14,9 @@ module.exports = {
         },
         js: {
             src: 'resourse/js/*.js',
+            src2page: 'resourse/js/2page/*.js',
             dist: 'public/js/'
+
         },
         image: {
             src: 'resourse/img/*.(png | jpg | jpeg)',

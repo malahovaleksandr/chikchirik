@@ -52,21 +52,22 @@ gulp.task('svg_sprite', function() {
         .pipe(svgSprite($.config.spriteSvgConfig))
         .pipe(gulp.dest($.config.paths.svg.dist));
 });
-///подключаем JS c помощью broserfy
-// gulp.task('js_process', function() {
-//        gulp.src($.config.paths.js.src)
-//         .pipe(sourcemaps.init())
-//         .pipe(concat('main.js'))
-//        .pipe(browserify())
-//         .pipe(minify())
-//         .pipe(sourcemaps.write())
-//         .pipe(gulp.dest($.config.paths.js.dist))
-// });
+
 ///собираем  JS в один файл с мапами
 gulp.task('scripts', function() {
     return gulp.src($.config.paths.js.src)
         .pipe(sourcemaps.init())
         .pipe(concat('main.js'))
+        .pipe(minify())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest($.config.paths.js.dist));
+});
+
+///собираем  JS в один файл с мапами для второй страницы
+gulp.task('scripts2page', function() {
+    return gulp.src($.config.paths.js.src2page)
+        .pipe(sourcemaps.init())
+        .pipe(concat('main2page.js'))
         .pipe(minify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest($.config.paths.js.dist));
@@ -114,6 +115,7 @@ gulp.task('watch', function () {
     gulp.watch($.config.paths.watch.src, ['scss']).on('change', browserSync.reload);
     gulp.watch($.config.paths.svg.src, ['svg_sprite']).on('change', browserSync.reload);
     gulp.watch($.config.paths.js.src, ['scripts']).on('change', browserSync.reload);
+    gulp.watch($.config.paths.js.src2page, ['scripts2page']).on('change', browserSync.reload);
 });
 ///подключаем Server
 gulp.task('serve', function() {
@@ -127,7 +129,7 @@ gulp.task('clean', function () {
             .pipe(clean());
 });
 
-gulp.task('default', [ 'watch','scss','jade','scripts','jadeIndex','svg_sprite','serve']);
+gulp.task('default', [ 'watch','scss','jade','scripts','scripts2page','jadeIndex','svg_sprite','serve']);
 // gulp.task('default', gulp.series(
 //     'clean',
 //     gulp.parallel(

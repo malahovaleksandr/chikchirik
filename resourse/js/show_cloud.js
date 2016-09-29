@@ -86,6 +86,12 @@ $(document).ready(function(){
 			
 		}
 
+		if($(window).width()<800 && $(window).width()>600){//для планшета вертикально чтоб было виднооблака раньше
+			console.log('tablet');
+			blockCloud=$('.page3_content').offset().top-700;
+			blockCloudBefore=$('.page3_content').offset().top-1600;
+
+		}
 		//эти условия срабатывают когда прокрутка опускается до нужного блока и беруться параметры из БД и применяются к нужному кружку
 		if(scrollTop>=blockCloud){
 			

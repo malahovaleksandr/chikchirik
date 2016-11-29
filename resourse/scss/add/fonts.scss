@@ -1,4 +1,12 @@
-
+@font-face {
+  font-family: "MullerLight";
+  src: url("../fonts/MullerLight.otf");
+  //src: url("../fonts/MullerExtraBold/MullerExtraBold.eot");
+  //url("../fonts/MullerExtraBold/MullerExtraBold.woff") format("woff"),
+  //url("../fonts/MullerExtraBold/MullerExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 @font-face {
   font-family: "MullerExtraBold";
   src: url("../fonts/MullerExtraBold/MullerExtraBold.otf");

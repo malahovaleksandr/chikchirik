@@ -1,9 +1,8 @@
-section.desktop.page1-desktop
+section.desktop.page1-desktop.section
     .link-for-deskto#1
-
+    img(src="../image/blogCloud1.png", alt="cloth").blogDesktop1__cloth1
+    img(src="../image/blogCloud2.png", alt="cloth").blogDesktop1__cloth2
     .content-desktop
-        img(src="../image/blogCloud1.png", alt="cloth").blogDesktop1__cloth1
-        img(src="../image/blogCloud2.png", alt="cloth").blogDesktop1__cloth2
 
         .desktop1_content
             .desktop1__title.blogDesktop1_title
@@ -13,15 +12,16 @@ section.desktop.page1-desktop
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Aliquam et lectus et leo venenatis mollis eget eget justo.
                      Praesent tristique lacus eget orci sodales, vitae
-            .striped-line ....................
+            .striped-line.stripedLineBlog ....................
             .desktop1__box-photo
-                img(src="../image/Box.png", alt="image-box").desktop1__image
-            .striped-line ....................
+                img(src="../image/Box.png", alt="image-box").blogPage1__image
+            .striped-line.stripedLineBlog ....................
             form(action="", method="post").blogBlogForm
                 input(type='text', name='name', placeholder='ВАШЕ ИМЯ').inputName.textInput
                 .block2Input
-                    input(type='text', name='telephone', placeholder='НОМЕР ТЕЛЕФОНА').inputTelephone.textInput
-                    input(type='text', name='mail', placeholder='EMAIL').inputEmail.textInput
+                    input(type='text', name='telephone', placeholder='НОМЕР ТЕЛЕФОНА').inputTelephone.textInput.js_phoneNumber
+                    input(type='text', name='mail', placeholder='EMAIL').inputEmail.textInput.js_inputEmail
+                    .validateIcon
                 input(type='text', name='adress', placeholder='АДРЕС ДОСТАВКИ').inputAdress.textInput
                 button.blogDesktop1Button НУ ДАВАЙТЕ ЖЕ
                     img(src="../image/blogKassa.png", alt="kassa").kassa_image-button

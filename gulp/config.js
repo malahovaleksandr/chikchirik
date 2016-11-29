@@ -15,8 +15,13 @@ module.exports = {
         js: {
             src: 'resourse/js/*.js',
             src2page: 'resourse/js/2page/*.js',
+            srcBuy: 'resourse/js/Buypage/*.js',
             dist: 'public/js/'
 
+        },
+        php:{
+            src: 'resourse/php/*.php',
+            dist: 'public/php'
         },
         image: {
             src: 'resourse/img/*.(png | jpg | jpeg)',

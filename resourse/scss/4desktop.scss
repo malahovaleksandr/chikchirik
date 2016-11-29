@@ -7,8 +7,11 @@
   bottom: -95px;
   right: -20%;
   width: 50%;
+  //bottom: -44px;//размерв пикселях
+  //right: -150px;
+  //width: 600px;
   @include breakpoint(phone)  {
-    width: 260px;
+    width: 210px;
     right: -70px;
     bottom: -60px;
   }
@@ -17,39 +20,43 @@
   align-items: flex-start;
   flex-direction: column;
   justify-content: flex-start;
-  padding-left:235px;
+  padding-left:200px;
   //padding-top:80px;
   @include breakpoint(phone)  {
     padding-left:10px;
+    padding-top:70px;
   }
 }
   .page4_menu-item{
     color:#fff;
     transition: 1.5s;
-    width: 60%;
+    width: 70%;
 
     @include breakpoint(phone)  {
       width: 90%;
     }
 
-      &:hover{
-        cursor: pointer;
-      }
+      //&:hover{
+      //  cursor: pointer;
+      //}
       &:hover .page4_menu-title{
-        font-size:5rem ;
+        font-size:4rem ;
         @include breakpoint(phone)  {
-          font-size:3.5rem ;
+          font-size:2.5rem ;
         }
       }
     }
 
     .page4_menu-title{
       font-family: "UniSansHeavy";
-      font-size:3.75rem ;
+      font-size:3rem ;
       line-height: 1;
       transition: font-size 0.5s ;
       @include breakpoint(phone)  {
-        font-size:2.75rem ;
+        font-size:2rem ;
+      }
+      &:hover{
+        cursor: pointer;
       }
 
     }
@@ -57,18 +64,29 @@
       transition: height 0.5s ;
       overflow: hidden;
       height: 1px;
+    & a {
+      color:#fff;
+    }
+    }
+    .page4_menu-text_widthSmall{
+      @include breakpoint(phone)  {
+        width: 210px;
+      }
 
     }
     .page4_menu-text_activ{
-      height: 120px;
+      height: 100px;
       margin:20px 0 10px 0;
+      width:90%;
       @include breakpoint(phone)  {
-        height: 130px;
+        height: 120px;
+        width:100%;
+        margin:5px 0 5px 0;
       }
     }
     .page4_menu-title_activ{
-      font-size:5rem ;
+      font-size:4rem ;
       @include breakpoint(phone)  {
-        font-size:3.5rem ;
+        font-size:3rem ;
       }
     }

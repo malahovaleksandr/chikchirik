@@ -11,7 +11,7 @@ var gulp = require('gulp'),
     svgmin = require('gulp-svgmin'),//минифицирует свг файлы, убирая не нужные атрибуты , такие как fiil
     minify = require('gulp-minify'),// для минификации js файла
     concat = require('gulp-concat'),// конкат для js
-    
+    jadePhp = require('gulp-jade-php'),
     clean = require('gulp-clean');//перед запуском удаляет старые файлы
     
 
@@ -72,6 +72,15 @@ gulp.task('scripts2page', function() {
         .pipe(sourcemaps.write())
         .pipe(gulp.dest($.config.paths.js.dist));
 });
+///собираем  JS в один файл с мапами для страницы покупки Buypage
+gulp.task('scriptsBuypage', function() {
+    return gulp.src($.config.paths.js.srcBuy)
+        .pipe(sourcemaps.init())
+        .pipe(concat('Buypage.js'))
+        .pipe(minify())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest($.config.paths.js.dist));
+});
 ///подключаем JADE
 gulp.task('jade', function() {
     var YOUR_LOCALS = {};
@@ -95,7 +104,7 @@ gulp.task('jadeIndex', function() {
         .pipe(browserSync.stream());
 });
 ///подключаем JADEPHP INDEX.HTML to Index.php выбираю каким лучше компилировать в php
-gulp.task('jadePhp', function() {
+gulp.task('jadePhpIndex', function() {
     var YOUR_LOCALS = {};
     gulp.src($.config.paths.jade.srcIndex)
         .pipe(jadePhp({
@@ -105,17 +114,29 @@ gulp.task('jadePhp', function() {
         .pipe(gulp.dest($.config.paths.jade.distIndex))
         .pipe(browserSync.stream());
 });
+gulp.task('jadePhp', function() {
+    var YOUR_LOCALS = {};
+    gulp.src($.config.paths.jade.src)
+        .pipe(jadePhp({
+            locals: YOUR_LOCALS,
+            pretty:'\t'
+        }))
+        .pipe(gulp.dest($.config.paths.jade.dist))
+        .pipe(browserSync.stream());
+});
 ///подключаем WATCH
 gulp.task('watch', function () {
 
-    gulp.watch($.config.paths.jade.srcWatch, ['jade']).on('change', browserSync.reload);
-    gulp.watch($.config.paths.jade.srcIndex, ['jadeIndex']).on('change', browserSync.reload);
-    gulp.watch($.config.paths.jade.srcWatchAdd, ['jadeIndex']).on('change', browserSync.reload);
-    gulp.watch($.config.paths.jade.srcWatchAdd, ['jade']).on('change', browserSync.reload);
+    //gulp.watch($.config.paths.jade.srcWatch, ['jade']).on('change', browserSync.reload);
+    //gulp.watch($.config.paths.jade.srcIndex, ['jadeIndex']).on('change', browserSync.reload);
+    gulp.watch($.config.paths.jade.srcWatchAdd, ['jadePhpIndex']).on('change', browserSync.reload);
+    gulp.watch($.config.paths.jade.srcWatchAdd, ['jadePhp']).on('change', browserSync.reload);
     gulp.watch($.config.paths.watch.src, ['scss']).on('change', browserSync.reload);
     gulp.watch($.config.paths.svg.src, ['svg_sprite']).on('change', browserSync.reload);
     gulp.watch($.config.paths.js.src, ['scripts']).on('change', browserSync.reload);
     gulp.watch($.config.paths.js.src2page, ['scripts2page']).on('change', browserSync.reload);
+    gulp.watch($.config.paths.js.srcBuy, ['scriptsBuypage']).on('change', browserSync.reload);
+    gulp.watch($.config.paths.php.src, ['PHPFiles']).on('change', browserSync.reload);
 });
 ///подключаем Server
 gulp.task('serve', function() {
@@ -123,13 +144,15 @@ gulp.task('serve', function() {
         server: "./public"
     });
 });
-///подключаем Clean
-gulp.task('clean', function () {
-           return gulp.src($.config.clean, {read: false})
-            .pipe(clean());
+
+gulp.task('PHPFiles', function() {
+    gulp.src($.config.paths.php.src)
+        .pipe(gulp.dest($.config.paths.php.dist))
+        .pipe(browserSync.stream());
+
 });
 
-gulp.task('default', [ 'watch','scss','jade','scripts','scripts2page','jadeIndex','svg_sprite','serve']);
+gulp.task('default', [ 'watch','scss','jadePhp','scripts','PHPFiles','scripts2page','scriptsBuypage','jadePhpIndex','svg_sprite','serve']);
 // gulp.task('default', gulp.series(
 //     'clean',
 //     gulp.parallel(

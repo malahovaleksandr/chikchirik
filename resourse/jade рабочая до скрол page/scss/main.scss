@@ -1,0 +1,337 @@
+@import "add/_mixin_variab";
+@import "add/fonts";
+@import "1desktop";
+@import "2desktop";
+@import "3desktop";
+@import "4desktop";
+@import "5desktop";
+@import "normalize";
+@import "blog1desktop";
+@import "blog2desktop";
+@import "jquery.fullPage";
+
+
+html, body {
+	width:100%;
+	height:100%;
+}
+html{
+	font-size: 16px;
+	@include breakpoint(tablet)  {
+		font-size: 14px;
+	}
+	@include breakpoint(phone)  {
+		font-size: 12px;
+	}
+}
+body{
+	position: relative;
+}
+
+
+.link-for-desktop{
+	height: 1px;
+}
+
+
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	background: none;
+	transition: 0.5s;
+
+	flex: 0 0 auto;
+	width: 100%;
+	height: 108px;
+	display: flex;
+	align-items: center;
+	padding:15px 22px 0 20px;
+	@include breakpoint(tablet)  {
+		padding:10px 2px 0 10px;
+		height: 70px;
+	}
+	@include breakpoint(phone)  {
+		padding:8px 2px 0 10px;
+		height: 100px;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items:flex-start;
+	}
+}
+.header_orange{
+	background: #eda223;
+}
+.header_logo{
+	height: 102px;
+	flex:0 0 auto;
+	margin-top: 16px;
+	transition: 0.8s;
+
+	@include breakpoint(tablet)  {
+		height:70px;
+	}
+	@include breakpoint(phone)  {
+		height:50px;
+		position: absolute;
+		left: 5px;
+		top: 5px;
+		margin-top: 0;
+	}
+}
+.header_nav{
+	//flex:1 0 auto;
+	display: flex;
+	justify-content: center;
+	@include breakpoint(phone)  {
+		padding-left:50px;
+		justify-content:space-around;
+		width: 100%;
+	}
+}
+.header_nav-text{
+	transition: 0.5s ;
+	font-family: "MullerRegular";
+	font-size:0.875rem ;
+	line-height: 1.125rem;
+	margin-left: 34px;
+	cursor: pointer;
+
+	@include breakpoint(tablet)  {
+		margin-left: 20px;
+	}
+	@include breakpoint(phone)  {
+		margin-left: 10px;
+	}
+
+	color: white;
+	opacity: 0.7;
+	border-bottom:1px dashed white ;
+	&.active{
+		opacity:1;
+		border-bottom:none;
+	}
+	&:hover{
+		opacity:1;
+	}
+}
+.header_navigation-block{
+	flex:0 0 auto;
+	margin-left:auto;
+	display: flex;
+	padding-left:40px;
+	@include breakpoint(phone)  {
+		padding-top:42px;
+		padding-left:0;
+		justify-content: space-between;
+		width: 100%;
+	}
+}
+.header__coins{
+	position: relative;
+	margin-right:103px;
+	display: flex;
+	align-items: center;
+	@include breakpoint(tablet)  {
+		margin-right:15px;
+	}
+	@include breakpoint(phone)  {
+		margin-right:5px;
+	}
+
+}
+
+.header__coins_image{
+	left: 9px;
+	top: 47%;
+	transform:translate(-50%,-50%);
+	height: 72px;
+
+	position: absolute;
+	@include breakpoint(tablet)  {
+		height:55px;
+	}
+	@include breakpoint(phone)  {
+		height:40px;
+	}
+
+}
+
+.header__coins_button{
+	transition: background  1s ;
+	width: 145px;
+	font-family: "UniSansHeavy";
+	font-size:1rem ;
+	line-height: 1;
+	padding:0;
+	padding-left: 30px;
+	height:45px;
+	border-radius: 43px;
+	background: #df8600;
+	border: none;
+
+	@include breakpoint(tablet)  {
+		width:120px;
+		height:40px;
+	}
+	@include breakpoint(phone)  {
+		width:90px;
+		height:30px;
+		padding-left: 20px;
+	}
+
+	&:hover{
+		background: #fff;
+
+		cursor: pointer;
+	}
+	&.color_blue { // этот класс для оранжевых страниц
+		background: #4ab7c7;
+		transition: background 1s;
+		&:hover {
+			background: #fff;
+
+			cursor: pointer;
+		}
+	}
+	&.color_blue .hover__button{// этот класс для оранжевых страниц
+		color:#fff;
+		transition: color 2s;
+		&:hover{
+			color:#4ab7c7;
+		}
+	}
+	&:hover .hover__button{
+		color: #df8600;
+	}
+
+	.hover__button{//этот класс чтоб селать отельно Transition для текста без бэкграунда
+		color: #fff;
+		transition: 2s;
+		line-height: 1;
+	}
+}
+.header__icons{
+	display: flex;
+	margin-left:auto;
+	align-items: center;
+}
+.header_nav__icon{
+	transition: 0.8s ;
+	opacity: 0.7;
+	margin-left:9px;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background-repeat: no-repeat;
+
+	@include breakpoint(tablet)  {
+		width:25px;
+	}
+	@include breakpoint(phone)  {
+		width:30px;
+	}
+
+	&:hover{
+		opacity: 1;
+	}
+	&.first-icon{
+		margin-left:25px;
+	}
+}
+.header_nav__icon-fb{
+
+	background: url(../image/facebook.png);
+	&:hover{
+		background: url(../image/facebookHover.png);
+	}
+}
+.header_nav__icon-instagram{
+	background: url(../image/instagram.png);
+	&:hover{
+		background: url(../image/instagramHover.png);
+	}
+}
+.header_nav__icon-mail{
+	background: url(../image/mail.png);
+	&:hover{
+		background: url(../image/mailHover.png);
+	}
+	width: 28px;
+	height: 28px;
+}
+
+.footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+
+	padding-left:19px;
+	padding-right:6px;
+	z-index: 3;
+	flex: 0 0 auto;
+	height: 26px;
+	width: 100%;
+	//border: 1px solid red;
+	display: flex;
+	color:white;
+}
+.footer-text1{
+	font-family: "MullerRegular";
+	font-size:0.75rem ;
+	line-height: 1.125rem;
+}
+.footer-text2{
+	z-index: 3;
+	margin-left:auto;
+	display: flex;
+	.footer-text2_ExtraBold{
+		color:white;
+		font-family: "MullerExtraBold";
+		font-size:0.75rem ;
+		line-height: 1.125rem;
+	}
+	.footer-text2_MullerRegular{
+		margin-left:3px;
+		color:white;
+		font-family: "MullerRegular";
+		font-size:0.75rem ;
+		line-height: 1.125rem;
+	}
+}
+
+//настройки пагинатора
+//.onepage-pagination{
+//	position: fixed;
+//	right: 0;
+//	top:50%;
+//	z-index: 6;
+//	width:20px;
+//	height: 100px;
+//	border: 1px solid black;
+//
+//	list-style: none;
+//	margin: 0;
+//	padding: 0;
+//	li{
+//		border: 1px solid red;
+//		width:18px;
+//		height: 20px;
+//		padding: 0;
+//		text-align: center;
+//	}
+//	li a{
+//		padding: 10px;
+//		width: 4px;
+//		height: 4px;
+//		display: block;
+//	}
+//}
+//.red{
+//	background: blue;
+//	right:50px;
+//}

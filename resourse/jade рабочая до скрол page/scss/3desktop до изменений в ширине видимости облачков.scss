@@ -1,0 +1,261 @@
+//.page3_background{
+//  background: url(../image/page3_background.png);
+//  //background-size: cover;
+//  background-repeat: repeat-x;
+//}
+
+.content-desktop{
+
+  &.desktop-page3{
+    //margin-left:120px ;
+    //margin-right:120px ;
+    position: relative;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 auto;
+    width:900px;
+    @include breakpoint(tablet)  {
+      margin:0 ;
+      width:auto;
+      justify-content: center;
+    }
+    @include breakpoint(phone)  {
+      margin:0 ;
+      width:auto;
+      justify-content: flex-start;
+    }
+  }
+}
+    .page3_arrow{
+      transition: opacity 0.8s ;
+      position: absolute;
+      top: 50%;
+      width: 60px;
+      transform: translate(0,-50%);
+      opacity: 0.7;
+      z-index: 5;
+      @include breakpoint(phone)  {
+        width: 30px;
+      }
+      &:hover{
+        cursor: pointer;
+        opacity: 1;
+      }
+    }
+      .page3_arrow-right{
+        right: 40px;
+
+        @include breakpoint(phone)  {
+          right: 5px;
+          transform: translateY(-50%) rotate(-90deg);
+        }
+      }
+      .page3_arrow-left{
+        left: 40px;
+        @include breakpoint(phone)  {
+          left: 5px;
+          transform: translateY(-50%) rotate(-90deg);
+        }
+      }
+  .page3_box{
+    position: absolute;
+    left: 50%;
+    width: 410px;
+    bottom: -400px;
+    z-index: 3;
+    transform: translate(-50%,-50%);
+    @include breakpoint(phone)  {
+      width: 200px;
+      bottom: -200px;
+    }
+
+  }
+.page3_dotatedLeft{
+  position: absolute;
+  left: 200px;
+  height: 230px;
+  bottom: 60px;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  @include breakpoint(phone)  {
+    display: none;
+  }
+}
+.page3_dotatedCenter{
+  position: absolute;
+  left: 50%;
+  height: 220px;
+  bottom: 80px;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  @include breakpoint(phone)  {
+    display: none;
+  }
+}
+.page3_dotatedRight{
+  position: absolute;
+  right: 60px;
+  height: 230px;
+  bottom: 60px;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  @include breakpoint(phone)  {
+    display: none;
+  }
+}
+  .page3_content{
+   // border: 1px solid red;
+    margin-bottom:250px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width:100%;///это надо убрать и придумать чтоб двигалось
+    height: 370px;
+    align-items: center;
+    @include breakpoint(tablet)  {
+
+      margin-bottom:0;
+    }
+
+    @include breakpoint(phone)  {
+      height: 500px;
+      flex-direction: column;
+      margin-bottom:0;
+    }
+  }
+
+  //пробное облака абсолют распологаются
+.page3_content_absoluteBlock{
+  transition: 1s;
+  position: absolute;
+  top:-150%;
+  left:50%;
+  transform: translate(0,-50%);
+  display: inline-block;
+  opacity: 0;
+
+  @include breakpoint(phone)  {
+    top:50%;
+    left:-50%;
+    transform: translate(-50%,0);
+  }
+
+}
+      .cloud_absolute_left{
+        left:10px;
+        top:50%;
+        opacity: 1;
+        z-index:3;
+        @include breakpoint(phone)  {
+          left:50%;
+          top:0;
+          opacity: 1;
+        }
+      }
+      .cloud_absolute_center{
+        left:50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+        opacity: 1;
+        z-index:3;
+        @include breakpoint(phone)  {
+          left:50%;
+          top:50%;
+          opacity: 1;
+          transform: translate(-50%,-50%);
+        }
+      }
+      .cloud_absolute_right{
+        left:900px;
+        top:50%;
+        transform: translate(-100%,-50%);
+        opacity: 1;
+        z-index:3;
+        @include breakpoint(tablet)  {
+          left:800px;
+        }
+        @include breakpoint(phone)  {
+          left:50%;
+          top:100%;
+          opacity: 1;
+          transform: translate(-50%,-100%);
+        }
+      }
+
+
+    .block-cloud{//настройка общая для облака
+      width: 260px;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-end;
+      margin:0 15px;
+      height: 205px;
+      @include breakpoint(phone)  {
+        margin:20px 10px;
+        width: 210px;
+        height: 140px;
+      }
+
+
+    }
+    .page3_block-description{
+      z-index: 2;
+      color:#eda223;
+    }
+    .block-description_title1{//титул в блоке облака тонкий
+      font-family: "UniSansThin";
+      font-size:1.2rem ;
+      line-height:2rem ;
+    }
+    .block-description_title2{//титул в блоке облака жирный
+      font-family: "UniSansHeavy";
+      font-size:2.1rem ;
+      line-height:1.5rem ;
+    }
+    .block-cloud1{
+      background: url(../image/cloud-lamp.png);
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      padding-bottom:15px;
+      background-size: contain;
+
+      .page3_lamp-text{
+        padding-left: 73px;
+      }
+     }
+    .block-cloud2{
+      background: url(../image/cloud-book.png);
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      margin-bottom:100px;
+      padding-bottom:5px;
+      background-size: contain;
+      @include breakpoint(phone)  {
+        margin-bottom:0;
+        margin-right:70px;
+      }
+      .page3_book-text{
+        padding-left: 82px;
+      }
+
+     }
+    .block-cloud3{
+      background: url(../image/cloud-flower.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      margin-top:60px;
+      padding-bottom:15px;
+      @include breakpoint(phone)  {
+        margin-top:15px;
+        margin-left:50px;
+      }
+      .page3_flower-text{
+        padding-left: 75px;
+      }
+
+    }

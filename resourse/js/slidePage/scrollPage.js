@@ -11,10 +11,11 @@ $(document).ready(function(){
     if(windowHeight>660){
         $(window).scroll(function(){
             var st = $(this).scrollTop();
-
+console.log(st);
             if (st > lastScrollTop){//вниз прокрутка
                // console.log('вниз');
                 if(lastScrollTop==page1Height){
+                    console.log('scroll to page2');
                     $("html, body").animate({scrollTop: page2Height}, 1000);
                     console.log('сработал вниз на страницу 2');
                 }
@@ -50,14 +51,10 @@ $(document).ready(function(){
                     console.log('сработал вверх на страницу 1');
                 }
             }
-            lastScrollTop = st;
+            lastScrollTop = st;  
         });
     } else {
         console.log('маленький экран');
     }
-
-
-
-
 
 });

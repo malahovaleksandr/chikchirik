@@ -1,7 +1,7 @@
 include add/_mixin
 
 doctype HTML
-html(lang="en")
+html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport"  content="width=device-width, initial-scale=1.0")
@@ -13,23 +13,29 @@ html(lang="en")
         //link(el="shorcut icon" href="../favicon.ico" type="image/x-icon")
         //link(rel="icon" href="../favicon.ico" type="image/x-icon")
         title CHIKCHIRIK
+        script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false")
         link(rel="stylesheet" href="css/main.css")
         block head
 
     body
-
         include add/header
 
-        include add/1desktop
-        include add/2desktop
-        include add/3desktop
-        include add/4desktop
-        include add/5desktop
+        #fullpage
 
+
+            include add/1desktop
+            include add/2desktop
+            include add/3desktop
+            include add/4desktop
+            include add/5desktop
         include add/footer
+
 
     script(src="js/jquery.js", type="text/javascript")
     script(src="js/main.js", type="text/javascript")
+    //script(src="js/scrolloverflow.js", type="text/javascript")
+    //script(src="js/jquery.fullPage.js", type="text/javascript")
+    //script(src="js/examples.js", type="text/javascript")
 
 
 

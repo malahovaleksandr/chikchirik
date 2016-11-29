@@ -1,0 +1,138 @@
+.pageBuySection{
+
+  @include breakpoint(phone){
+    height: 100%;
+  }
+}
+.buyPageDesktop1_title{
+  width: 320px;
+
+  @include breakpoint(point1024){
+  margin-top:100px;
+  width:315px;
+}
+  @include breakpoint(tablet){
+    margin-top:100px;
+    width:315px;
+  }
+  @include breakpoint(phone){
+    margin-top:100px;
+  }
+}
+.textInLine{
+  margin-top:30px;
+  display: flex;
+  align-items: center;
+}
+.textThink{
+  font-family: "MullerRegular";
+  font-size:14px ;
+  line-height: 1.28;
+}
+.textBold{
+  font-family: "UniSansHeavy";
+  font-size:37px ;
+  line-height: 0.86;
+}
+.dashDescription{  margin:0 10px;}
+.buttonBuyPage{
+  margin:0 auto;
+  margin-top:110px;
+  @include breakpoint(phone){
+    margin-top:40px;
+    margin-bottom:20px;
+  }
+}
+.columnDelivery{
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+}
+.columnType{
+  width:54%;
+  display: flex;
+  flex-direction: column;
+  //border: 1px solid red;
+  font-family: "UniSansHeavy";
+  font-size:18px ;
+  line-height: 0.86;
+  @include breakpoint(phone){
+    font-size:16px ;
+  }
+}
+.inlineInput{
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  opacity: 0.8;
+
+  &:hover{
+    opacity:1;
+    cursor: pointer;
+  }
+}
+
+.nameInput, .dottedInput{
+  font-family: "MullerRegular";
+  font-size:14px ;
+  line-height: 1;
+}
+.nameInput{
+  margin-bottom:12px;
+  margin-left:auto;
+  width:113px;
+  &:hover{
+    cursor: pointer;
+  }
+  &:before{
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height:12px;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #fff;
+    border: 2px solid #fff;
+  }
+}
+.inlineInput:first-child{
+  margin-top:22px;
+}
+.dottedInput{
+  margin-left:20px;
+  margin-right:12px;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  min-width: 25%;
+  line-height: 7px;
+  @include breakpoint(phone){
+    letter-spacing: 0;
+  }
+ // border: 1px solid yellow;
+}
+.styleRadioBatton{
+  display: none;
+  padding-top: 3px;
+  &:checked ~ .nameInput:before{
+    background: #df8600;
+    content: "";
+  }
+}
+.nameInput_width{  width:90px;}
+.block2Input{
+  position: relative;
+}
+.validateIcon{
+  position: absolute;
+  right: -15px;
+ //transform: translate(-50%,-50%);
+  bottom: 36px;
+  width: 15px;
+  height: 15px;
+}
+

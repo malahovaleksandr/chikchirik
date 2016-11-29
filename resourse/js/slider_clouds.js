@@ -1,70 +1,161 @@
+$(document).ready(function() {
 
+    var arrowRight = $('.page3_arrow-right'),//стрелочка вправо
+        arrowLeft = $('.page3_arrow-left'),//стрелочка влево
 
-var arrowRight=$('.page3_arrow-right'),//стрелочка вправо
-    arrowLeft=$('.page3_arrow-left'),//стрелочка влево
+        dottedLeft = $('.page3_dotatedLeft'),//пунктир полосы
+        dottedRight = $('.page3_dotatedRight'),
+        dottedCenter = $('.page3_dotatedCenter'),
 
-    allCloud=$('.page3_content_absoluteBlock'),//все облака
-    conteiner=$('.page3_content'),//контейнер где лежат все облака
-    t=1;//порядковый номер
+        allCloud = $('.page3_content_absoluteBlock'),//все облака
+        conteiner = $('.page3_content'),//контейнер где лежат все облака
+        t = 1;//порядковый номер
 
-        arrowRight.on('click',function(){
-            console.log('номер: '+t);
+    arrowRight.on('click', function () {
+        var center = t - 1,
+            left = t - 2,
+            leftOut = t - 3,
+            RightOut = t + 1;
 
+        if (t < 0) {
+            t = allCloud.length - 1;
+        }//обнуляем коефициент t когда выше кол-ва облаков
 
-            var center=t+1,
-                right=t+2;
-            console.log('center: '+center);
-            console.log('right: '+right);
+        if (center == -1) {
+            center = allCloud.length - 1;
+        }
 
-             if(t==allCloud.length) {t=0; }//обнуляем коефициент t когда выше кол-ва облаков
-            if(center==allCloud.length) {center=0; console.log('center пронизил: '+t)}//редактируем коефициент чтоб не был выше чем колтчество облачков
-            if(center==allCloud.length+1) {center=1; console.log('center пронизил: '+t)}
-             if(right==allCloud.length) {right=0;console.log('right пронизил: '+t) }
-            if(right==allCloud.length+1) {right=1;console.log('right пронизил: '+t) }
-            if(right==allCloud.length+2) {right=2;console.log('right пронизил: '+t) }
+        if (left == -1) {
+            left = allCloud.length - 1;
+        }//редактируем коефициент чтоб не был выше чем колтчество облачков
+        if (left == -2) {
+            left = allCloud.length - 2;
+        }
 
+        if (leftOut == -1) {
+            leftOut = allCloud.length - 1;
+        }
+        if (leftOut == -2) {
+            leftOut = allCloud.length - 2;
+        }
+        if (leftOut == -3) {
+            leftOut = allCloud.length - 3;
+        }
 
+        if (RightOut == allCloud.length) {
+            RightOut = 0;
+        }
+        if (RightOut == allCloud.length + 1) {
+            RightOut = 1;
+        }
 
-            conteiner.find('.cloud_absolute_left').removeClass('cloud_absolute_left');//удаляем классы чтоб облаком поменяло место
-            conteiner.find('.cloud_absolute_center').removeClass('cloud_absolute_center');
-            conteiner.find('.cloud_absolute_right').removeClass('cloud_absolute_right');
+        dottedLeft.css('opacity', 0);
+        dottedRight.css('opacity', 0);
+        dottedCenter.css('opacity', 0);
 
-            allCloud.eq(t).addClass('cloud_absolute_left');//добавляем класс который переместит облако в нужное новое положение
-            allCloud.eq(center).addClass('cloud_absolute_center');
-            allCloud.eq(right).addClass('cloud_absolute_right');
+        if ($(window).width() > 768) {
+            console.log('разрешение больше 768');
+            allCloud.eq(t).css({'left': '75%', 'opacity': 1});//добавляем класс который переместит облако в нужное новое положение
+            allCloud.eq(RightOut).css({'left': '100%', 'opacity': 0});
+            allCloud.eq(center).css({'left': '50%', 'opacity': 1});
+            allCloud.eq(left).css({'left': '25%', 'opacity': 1});
+            allCloud.eq(leftOut).css({'left': '-10%', 'opacity': 0});
+        } else {
+            console.log('разрешение меньше 768');
+            allCloud.eq(t).css({'top': '55%', 'left': '50%', 'opacity': 1});//добавляем класс который переместит облако в нужное новое положение
+            allCloud.eq(RightOut).css({'top': '200%', 'left': '50%', 'opacity': 0});
+            allCloud.eq(center).css({'top': '20%', 'left': '50%', 'opacity': 1});
+            allCloud.eq(left).css({'top': '-20%', 'left': '50%', 'opacity': 1});
+            allCloud.eq(leftOut).css({'top': '-100%', 'left': '50%', 'opacity': 0});
+        }
 
+        console.log('движение вправо leftOut: ' + leftOut + ' left: ' + left + ' center: ' + center + ' t: ' + t + ' RightOut: ' + RightOut);
 
-             t++;
+        dottedLeft.stop(true).animate({opacity: 1}, 2000);
+        dottedRight.stop(true).animate({opacity: 1}, 2000);
+        dottedCenter.stop(true).animate({opacity: 1}, 2000);
 
-        });
+        // dottedLeft.css('opacity', 1);
+        // dottedRight.css('opacity', 1);
+        // dottedCenter.css('opacity', 1);
 
-        arrowLeft.on('click',function(){
+        t--;
+    });
 
-            if(t<0) {t=allCloud.length-1; }
-            var center=t-1,
-                left=t-2;
+    arrowLeft.on('click', function () {
+        if (t == allCloud.length) {
+            t = 0;
+        }
+        var rightOut1 = t + 3,
+            right1 = t + 2,
+            center1 = t + 1,
+            left1 = t - 1,
+            leftOut1 = t - 2;
 
+        if (left1 == -1) {
+            left1 = allCloud.length - 1;
+        }
 
-            if(center==-1) {center=allCloud.length-1; console.log('center пронизил: '+center)}
-            if(center==-2) {center=allCloud.length-2; console.log('center пронизил: '+center)}
+        if (leftOut1 == -1) {
+            leftOut1 = allCloud.length - 1;
+        }
+        if (leftOut1 == -2) {
+            leftOut1 = allCloud.length - 2;
+        }
 
-            if(left==-1) {left=allCloud.length-1;console.log('left пронизил: '+left) }
-            if(left==-2) {left=allCloud.length-2;console.log('left пронизил: '+left) }
-            if(left==-3) {left=allCloud.length-3;console.log('left пронизил: '+left) }
+        if (center1 == allCloud.length) {
+            center1 = 0;
+        }
 
-            console.log('t: '+t);
-            console.log('center: '+center);
-            console.log('left: '+left);
+        if (right1 == allCloud.length) {
+            right1 = 0;
+        }
+        if (right1 == allCloud.length + 1) {
+            right1 = 1;
+        }
+        if (right1 == allCloud.length + 2) {
+            right1 = 2;
+        }
 
-            conteiner.find('.cloud_absolute_left').removeClass('cloud_absolute_left');//удаляем классы чтоб облаком поменяло место
-            conteiner.find('.cloud_absolute_center').removeClass('cloud_absolute_center');
-            conteiner.find('.cloud_absolute_right').removeClass('cloud_absolute_right');
+        if (rightOut1 == allCloud.length) {
+            rightOut1 = 0;
+        }
+        if (rightOut1 == allCloud.length + 1) {
+            rightOut1 = 1;
+        }
+        if (rightOut1 == allCloud.length + 2) {
+            rightOut1 = 2;
+        }
+        if (rightOut1 == allCloud.length + 3) {
+            rightOut1 = 3;
+        }
 
-            allCloud.eq(t).addClass('cloud_absolute_right');//добавляем класс который переместит облако в нужное новое положение
-            allCloud.eq(center).addClass('cloud_absolute_center');
-            allCloud.eq(left).addClass('cloud_absolute_left');
+        dottedLeft.css('opacity', 0);
+        dottedRight.css('opacity', 0);
+        dottedCenter.css('opacity', 0);
 
-            t--;
+        if ($(window).width() > 768) {
+            console.log('разрешение меньше 768');
+            allCloud.eq(t).css({'left': '25%', 'opacity': 1});//добавляем класс который переместит облако в нужное новое положение
+            allCloud.eq(left1).css({'left': '-10%', 'opacity': 0});
+            allCloud.eq(center1).css({'left': '50%', 'opacity': 1});
+            allCloud.eq(right1).css({'left': '75%', 'opacity': 1});
+            allCloud.eq(rightOut1).css({'left': '100%', 'opacity': 0});
+        } else {
+            console.log('разрешение меньше 768');
+            allCloud.eq(t).css({'top': '-20%', 'left': '50%', 'opacity': 1});//добавляем класс который переместит облако в нужное новое положение
+            allCloud.eq(left1).css({'top': '-100%', 'left': '50%', 'opacity': 0});
+            allCloud.eq(center1).css({'top': '20%', 'left': '50%', 'opacity': 1});
+            allCloud.eq(right1).css({'top': '55%', 'left': '50%', 'opacity': 1});
+            allCloud.eq(rightOut1).css({'top': '100%', 'left': '50%', 'opacity': 0});
+        }
 
+        console.log('движение влево leftOut1: ' + leftOut1 + ' left1: ' + left1 + ' t: ' + t + ' center1: ' + center1 + ' right1: ' + right1 + ' rightOut1: ' + rightOut1);
 
-        });
+        dottedLeft.stop(true).animate({opacity: 1}, 2000);
+        dottedRight.stop(true).animate({opacity: 1}, 2000);
+        dottedCenter.stop(true).animate({opacity: 1}, 2000);
+
+        t++;
+    });
+});

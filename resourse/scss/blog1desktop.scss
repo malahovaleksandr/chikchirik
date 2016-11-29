@@ -12,6 +12,19 @@
   width: 10%;
   z-index: 11;
 }
+.blogPage1__image{
+  box-shadow: 50px 30px 68px rgba(#000,0.2);
+  width: 290px;
+  @include breakpoint(point1024)  {
+    width: 200px;
+  }
+  @include breakpoint(tablet)  {
+    width: 150px;
+  }
+  @include breakpoint(phone)  {
+    width: 125px;
+  }
+}
 .blogDesktop1_title{
   //z-index: 10;
   @include breakpoint(tablet)  {
@@ -31,9 +44,22 @@
   }
 
 }
+.stripedLineBlog{
+  @include breakpoint(point1024){
+    width: 50px;
+  }
+  @include breakpoint(tablet)  {
+    width: 1px;
+  }
+  @include breakpoint(phone)  {
+    display: none;
+  }
+}
 .blogBlogForm{
   width:29%;
+
   min-width: 300px;
+  max-width: 380px;
 }
 .block2Input{
   display:flex;
@@ -45,6 +71,7 @@
   font-family: "UniSansHeavy";
   font-size:1rem ;
   color:rgba(#4ab7c7,.5);
+  padding-top:3px;
   border: none;
   line-height: 2.5rem;
   width: 100%;

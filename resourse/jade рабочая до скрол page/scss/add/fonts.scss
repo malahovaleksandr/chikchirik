@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "MullerLight";
+  src: url("../fonts/MullerLight.otf.otf");
+  //src: url("../fonts/MullerExtraBold/MullerExtraBold.eot");
+  //url("../fonts/MullerExtraBold/MullerExtraBold.woff") format("woff"),
+  //url("../fonts/MullerExtraBold/MullerExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "MullerExtraBold";
+  src: url("../fonts/MullerExtraBold/MullerExtraBold.otf");
+  //src: url("../fonts/MullerExtraBold/MullerExtraBold.eot");
+  //url("../fonts/MullerExtraBold/MullerExtraBold.woff") format("woff"),
+  //url("../fonts/MullerExtraBold/MullerExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "MullerRegular";
+  src: url("../fonts/MullerRegular/MullerRegular.otf");
+  //src: url("../fonts/MullerExtraBold/MullerRegular.eot");
+  //url("../fonts/MullerExtraBold/MullerRegular.woff") format("woff"),
+  //url("../fonts/MullerExtraBold/MullerRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "UniSansHeavy";
+  src: url("../fonts/UniSansHeavy/UniSansHeavy.otf");
+  //src: url("../fonts/UniSansHeavy.otf"); //рабочий шрифт от оли
+  //src: url("../fonts/MullerExtraBold/UniSansHeavy.eot");
+  //url("../fonts/MullerExtraBold/UniSansHeavy.woff") format("woff"),
+  //url("../fonts/MullerExtraBold/UniSansHeavy.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "UniSansThin";
+  src: url('../fonts/UniSansThin/Uni Sans Thin.otf');
+    font-style: normal;
+  font-weight: normal;
+}
+
+
+//@font-face {
+//  font-family: 'uni_sansheavy_caps';
+//  src: url('../fonts/UniSansHeavy/uni_sans_heavy-webfont.eot');
+//  src: url('../fonts/UniSansHeavy/uni_sans_heavy-webfont.eot?#iefix') format('embedded-opentype'),
+//  url('../fonts/UniSansHeavy/uni_sans_heavy-webfont.woff') format('woff'),
+//  url('../fonts/UniSansHeavy/uni_sans_heavy-webfont.ttf') format('truetype'),
+//  url('../fonts/UniSansHeavy/uni_sans_heavy-webfont.svg#uni_sansheavy_caps') format('svg');
+//  font-weight: normal;
+//  font-style: normal;
+//
+//}

@@ -1,21 +1,24 @@
 header.header
     img(src="image/logovector.png",alt="logo").header_logo
     .header_nav
-        a(href="#1",data-index="1")
+        a(href="#main",data-index="1")
             .header_nav-text.active Главная
-        a(href="#2",data-index="2")
+        a(href="#about",data-index="2")
             .header_nav-text О нас
-        a(href="#3",data-index="3")
+        a(href="#box",data-index="3")
             .header_nav-text А что внутри?
-        a(href="#4",data-index="4")
-            .header_nav-text На связи
+        a(href="#details",data-index="4")
+            .header_nav-text Детали
+        a(href="#contacts",data-index="4")
+            .header_nav-text Контакты
     .header_navigation-block
         .header__coins
             img(src="image/insert-coin.png",alt="coins").header__coins_image
-            button.header__coins_button
-                .hover__button КУПИТЬ
+            a(href="page/buypage.html")
+                button.header__coins_button
+                    .hover__button КУПИТЬ
         .header__icons
-            a(href="page/blog.html")
+            a(href="page/blog.html").dispaly_none
                 .header_nav-text Бложек
             a(href="https://www.facebook.com/chikchirikkids/", target="_blank")
                 .header_nav__icon.header_nav__icon-fb.first-icon

@@ -3,7 +3,6 @@ section.desktop.page1-desktop.section.pageBuySection
     img(src="../image/blogCloud1.png", alt="cloth").blogDesktop1__cloth1
     img(src="../image/blogCloud2.png", alt="cloth").blogDesktop1__cloth2
     .content-desktop
-
         .desktop1_content
             .desktop1__title.blogDesktop1_title.buyPageDesktop1_title
                 .desktop1__title1 ДАЙТЕ МНЕ
@@ -23,13 +22,15 @@ section.desktop.page1-desktop.section.pageBuySection
                 img(src="../image/Box.png", alt="image-box").blogPage1__image
             .striped-line.stripedLineBlog ....................
             form(action="", method="post").blogBlogForm
-                input(type='text', name='name', placeholder='ВАШЕ ИМЯ').inputName.textInput
+
+                input(type='text', name='name', placeholder='ВАШЕ ИМЯ').inputName.textInput.js_inputName
                 .block2Input
                     input(type='text', name='telephone', placeholder='НОМЕР ТЕЛЕФОНА').inputTelephone.textInput.js_phoneNumber
                     input(type='text', name='mail', placeholder='EMAIL').inputEmail.textInput.js_inputEmail
                     .validateIcon
+                    .writeData  Заполните все поля
                 .columnDelivery
-                    .columnType СПОСОБ ОПЛАТЫ
+                    .columnType.js_payMethod СПОСОБ ОПЛАТЫ
                         .inlineInput
                             input(type="radio", name="typePay", value="cash",id="InputCash").styleRadioBatton.js_cashCurier
                             .dottedInput ..........
@@ -39,13 +40,13 @@ section.desktop.page1-desktop.section.pageBuySection
                             .dottedInput ..........
                             label(for="InputCod").nameInput.js_codPay Наложенным платежем
                         .inlineInput
-                            input(type="radio", name="typePay", value="card",id="InputCard",data-link="https://www.liqpay.com/ru/checkout/380631275355").styleRadioBatton.js_payCard
+                            input(type="radio", name="typePay", value="card",id="InputCard",checked="checked").styleRadioBatton.js_payCard
                             .dottedInput ..........
                             label(for="InputCard").nameInput.js_payCard Оплатить картой
 
-                    .columnType СПОСОБ ДОСАВКИ
+                    .columnTypejs_deliveryMeyhod СПОСОБ ДОСАВКИ
                         .inlineInput.js_deliveryCurierKiev
-                            input(type="radio", name="typeDelivery", value="curier",id="curier").styleRadioBatton.js_input_deliveryCurierKiev
+                            input(type="radio", name="typeDelivery", value="curier",id="curier",checked="checked").styleRadioBatton.js_input_deliveryCurierKiev
                             .dottedInput ..........
                             label(for="curier").nameInput.nameInput_width Курьером по Киеву
                         .inlineInput.js_deliveryNewPost
@@ -57,7 +58,7 @@ section.desktop.page1-desktop.section.pageBuySection
                             .dottedInput ..........
                             label(for="pickUp").nameInput.nameInput_width Самовывоз
 
-
+                .block_thanks.js_block_thanks Благодарим за покупку!!
 
 
 

@@ -81,6 +81,15 @@ gulp.task('scriptsBuypage', function() {
         .pipe(sourcemaps.write())
         .pipe(gulp.dest($.config.paths.js.dist));
 });
+///собираем  JS в один файл с мапами для страницы покупки Authorization
+gulp.task('scriptsAuth', function() {
+    return gulp.src($.config.paths.js.srcAuthoriz)
+        .pipe(sourcemaps.init())
+        .pipe(concat('authorization.js'))
+        .pipe(minify())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest($.config.paths.js.dist));
+});
 ///подключаем JADE
 gulp.task('jade', function() {
     var YOUR_LOCALS = {};
@@ -129,13 +138,14 @@ gulp.task('watch', function () {
 
     //gulp.watch($.config.paths.jade.srcWatch, ['jade']).on('change', browserSync.reload);
     //gulp.watch($.config.paths.jade.srcIndex, ['jadeIndex']).on('change', browserSync.reload);
-    gulp.watch($.config.paths.jade.srcWatchAdd, ['jadePhpIndex']).on('change', browserSync.reload);
-    gulp.watch($.config.paths.jade.srcWatchAdd, ['jadePhp']).on('change', browserSync.reload);
+    gulp.watch($.config.paths.jade.srcWatch, ['jadePhpIndex']).on('change', browserSync.reload);
+    gulp.watch($.config.paths.jade.srcWatch, ['jadePhp']).on('change', browserSync.reload);
     gulp.watch($.config.paths.watch.src, ['scss']).on('change', browserSync.reload);
     gulp.watch($.config.paths.svg.src, ['svg_sprite']).on('change', browserSync.reload);
     gulp.watch($.config.paths.js.src, ['scripts']).on('change', browserSync.reload);
     gulp.watch($.config.paths.js.src2page, ['scripts2page']).on('change', browserSync.reload);
     gulp.watch($.config.paths.js.srcBuy, ['scriptsBuypage']).on('change', browserSync.reload);
+    gulp.watch($.config.paths.js.srcAuthoriz, ['scriptsAuth']).on('change', browserSync.reload);
     gulp.watch($.config.paths.php.src, ['PHPFiles']).on('change', browserSync.reload);
 });
 ///подключаем Server
@@ -152,7 +162,7 @@ gulp.task('PHPFiles', function() {
 
 });
 
-gulp.task('default', [ 'watch','scss','jadePhp','scripts','PHPFiles','scripts2page','scriptsBuypage','jadePhpIndex','svg_sprite','serve']);
+gulp.task('default', [ 'watch','scss','jadePhp','scripts','PHPFiles','scripts2page','scriptsAuth','scriptsBuypage','jadePhpIndex','svg_sprite','serve']);
 // gulp.task('default', gulp.series(
 //     'clean',
 //     gulp.parallel(

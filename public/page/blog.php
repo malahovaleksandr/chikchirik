@@ -15,18 +15,18 @@
 	</head>
 	<body>
 		<header class="header"><img src="../image/logovector.png" alt="logo" class="header_logo">
-			<div class="header_nav"><a href="../index.html#main" data-index="1">
-					<div class="header_nav-text">Главная</div></a><a href="../index.html#about" data-index="2">
-					<div class="header_nav-text">О нас</div></a><a href="../index.html#box" data-index="3">
-					<div class="header_nav-text">А что внутри?</div></a><a href="../index.html#details" data-index="4">
-					<div class="header_nav-text">Детали</div></a><a href="../index.html#contacts" data-index="4">
+			<div class="header_nav"><a href="../index.php#main" data-index="1">
+					<div class="header_nav-text">Главная</div></a><a href="../index.php#about" data-index="2">
+					<div class="header_nav-text">О нас</div></a><a href="../index.php#box" data-index="3">
+					<div class="header_nav-text">А что внутри?</div></a><a href="../index.php#details" data-index="4">
+					<div class="header_nav-text">Детали</div></a><a href="../index.php#contacts" data-index="4">
 					<div class="header_nav-text">Контакты</div></a></div>
 			<div class="header_navigation-block">
-				<div class="header__coins"><img src="../image/insert-coin.png" alt="coins" class="header__coins_image"><a href="buypage.html">
+				<div class="header__coins"><img src="../image/insert-coin.png" alt="coins" class="header__coins_image"><a href="buypage.php">
 						<button class="header__coins_button">
 							<div class="hover__button">КУПИТЬ</div>
 						</button></a></div>
-				<div class="header__icons"><a href="blog.html">
+				<div class="header__icons"><a href="blog.php">
 						<div class="header_nav-text active">Бложек</div></a><a href="https://www.facebook.com/chikchirikkids/" target="_blank">
 						<div class="header_nav__icon header_nav__icon-fb first-icon"></div></a><a href="https://www.instagram.com/chikchirikkids/" target="_blank">
 						<div class="header_nav__icon header_nav__icon-instagram"></div></a><a href="mailto:CHIKCHIRIKKIDS@GMAIL.COM" target="_blank">

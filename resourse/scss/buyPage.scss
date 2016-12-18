@@ -134,5 +134,46 @@
   bottom: 36px;
   width: 15px;
   height: 15px;
+  @include breakpoint(phone){
+    bottom: 20px;
+  }
+  @include breakpoint(tablet){
+    bottom: 20px;
+  }
+}
+.writeData{
+  transition: 1s;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  color:red;
+  opacity: 0;
+  @include breakpoint(phone){
+     top: -15px;
+   }
+  @include breakpoint(tablet){
+    top: -15px;
+  }
 }
 
+//---настройки блока который появиться после оформления заказа
+.block_thanks{
+  position: absolute;
+  left: -10%;
+  top: 50%;
+  transition: opacity 1s;
+  transform: translate(-50%,-50%);
+  width: 300px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: #fff;
+  opacity:0;
+  background: rgba(#df8600,0.4);
+  //border: 1px solid red;
+  font-family: "UniSansHeavy";
+  font-size:20px ;
+  line-height: 1;
+}

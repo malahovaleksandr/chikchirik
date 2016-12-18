@@ -10,6 +10,8 @@
 @import "blog2desktop";
 @import "jquery.fullPage";
 @import "buyPage";
+@import "orders";
+@import "authorithation";
 
 html, body {
 	width:100%;
@@ -291,6 +293,12 @@ body{
 	font-family: "MullerRegular";
 	font-size:0.75rem ;
 	line-height: 1.125rem;
+	display: flex;
+
+}
+.linkToOrder{
+	color:#fff;
+	margin-left:4px;
 }
 .footer-text2{
 	z-index: 3;

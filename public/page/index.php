@@ -11,7 +11,7 @@
 		<!--link(el="shorcut icon" href="../favicon.ico" type="image/x-icon")-->
 		<!--link(rel="icon" href="../favicon.ico" type="image/x-icon")-->
 		<title>CHIKCHIRIK</title>
-		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyD1_ZgpT_JgXur3T9yV4BShz19Dj4I97cY"></script>
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
@@ -23,11 +23,11 @@
 					<div class="header_nav-text">Детали</div></a><a href="#contacts" data-index="4">
 					<div class="header_nav-text">Контакты</div></a></div>
 			<div class="header_navigation-block">
-				<div class="header__coins"><img src="image/insert-coin.png" alt="coins" class="header__coins_image"><a href="page/buypage.html">
+				<div class="header__coins"><img src="image/insert-coin.png" alt="coins" class="header__coins_image"><a href="page/buypage.php">
 						<button class="header__coins_button">
 							<div class="hover__button">КУПИТЬ</div>
 						</button></a></div>
-				<div class="header__icons"><a href="page/blog.html" class="dispaly_none">
+				<div class="header__icons"><a href="page/blog.php" class="dispaly_none">
 						<div class="header_nav-text">Бложек</div></a><a href="https://www.facebook.com/chikchirikkids/" target="_blank">
 						<div class="header_nav__icon header_nav__icon-fb first-icon"></div></a><a href="https://www.instagram.com/chikchirikkids/" target="_blank">
 						<div class="header_nav__icon header_nav__icon-instagram"></div></a><a href="mailto:CHIKCHIRIKKIDS@GMAIL.COM" target="_blank">

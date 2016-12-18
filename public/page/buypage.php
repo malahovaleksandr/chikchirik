@@ -15,18 +15,18 @@
 	</head>
 	<body>
 		<header class="header"><img src="../image/logovector.png" alt="logo" class="header_logo">
-			<div class="header_nav"><a href="../index.html#main" data-index="1">
-					<div class="header_nav-text">Главная</div></a><a href="../index.html#about" data-index="2">
-					<div class="header_nav-text">О нас</div></a><a href="../index.html#box" data-index="3">
-					<div class="header_nav-text">А что внутри?</div></a><a href="../index.html#details" data-index="4">
-					<div class="header_nav-text">Детали</div></a><a href="../index.html#contacts" data-index="4">
+			<div class="header_nav"><a href="../index.php#main" data-index="1">
+					<div class="header_nav-text">Главная</div></a><a href="../index.php#about" data-index="2">
+					<div class="header_nav-text">О нас</div></a><a href="../index.php#box" data-index="3">
+					<div class="header_nav-text">А что внутри?</div></a><a href="../index.php#details" data-index="4">
+					<div class="header_nav-text">Детали</div></a><a href="../index.php#contacts" data-index="4">
 					<div class="header_nav-text">Контакты</div></a></div>
 			<div class="header_navigation-block">
-				<div class="header__coins"><img src="../image/insert-coin.png" alt="coins" class="header__coins_image"><a href="buypage.html">
+				<div class="header__coins"><img src="../image/insert-coin.png" alt="coins" class="header__coins_image"><a href="buypage.php">
 						<button class="header__coins_button">
 							<div class="hover__button">КУПИТЬ</div>
 						</button></a></div>
-				<div class="header__icons"><a href="blog.html">
+				<div class="header__icons"><a href="blog.php">
 						<div class="header_nav-text active">Бложек</div></a><a href="https://www.facebook.com/chikchirikkids/" target="_blank">
 						<div class="header_nav__icon header_nav__icon-fb first-icon"></div></a><a href="https://www.instagram.com/chikchirikkids/" target="_blank">
 						<div class="header_nav__icon header_nav__icon-instagram"></div></a><a href="mailto:CHIKCHIRIKKIDS@GMAIL.COM" target="_blank">
@@ -56,14 +56,15 @@
 						<div class="desktop1__box-photo"><img src="../image/Box.png" alt="image-box" class="blogPage1__image"></div>
 						<div class="striped-line stripedLineBlog">....................</div>
 						<form action="" method="post" class="blogBlogForm">
-							<input type="text" name="name" placeholder="ВАШЕ ИМЯ" class="inputName textInput">
+							<input type="text" name="name" placeholder="ВАШЕ ИМЯ" class="inputName textInput js_inputName">
 							<div class="block2Input">
 								<input type="text" name="telephone" placeholder="НОМЕР ТЕЛЕФОНА" class="inputTelephone textInput js_phoneNumber">
 								<input type="text" name="mail" placeholder="EMAIL" class="inputEmail textInput js_inputEmail">
 								<div class="validateIcon"></div>
+								<div class="writeData"> Заполните все поля</div>
 							</div>
 							<div class="columnDelivery">
-								<div class="columnType">СПОСОБ ОПЛАТЫ
+								<div class="columnType js_payMethod">СПОСОБ ОПЛАТЫ
 									<div class="inlineInput">
 										<input type="radio" name="typePay" value="cash" id="InputCash" class="styleRadioBatton js_cashCurier">
 										<div class="dottedInput">..........</div>
@@ -75,14 +76,14 @@
 										<label for="InputCod" class="nameInput js_codPay">Наложенным платежем</label>
 									</div>
 									<div class="inlineInput">
-										<input type="radio" name="typePay" value="card" id="InputCard" data-link="https://www.liqpay.com/ru/checkout/380631275355" class="styleRadioBatton js_payCard">
+										<input type="radio" name="typePay" value="card" id="InputCard" checked="checked" class="styleRadioBatton js_payCard">
 										<div class="dottedInput">..........</div>
 										<label for="InputCard" class="nameInput js_payCard">Оплатить картой</label>
 									</div>
 								</div>
-								<div class="columnType">СПОСОБ ДОСАВКИ
+								<div class="columnTypejs_deliveryMeyhod">СПОСОБ ДОСАВКИ
 									<div class="inlineInput js_deliveryCurierKiev">
-										<input type="radio" name="typeDelivery" value="curier" id="curier" class="styleRadioBatton js_input_deliveryCurierKiev">
+										<input type="radio" name="typeDelivery" value="curier" id="curier" checked="checked" class="styleRadioBatton js_input_deliveryCurierKiev">
 										<div class="dottedInput">..........</div>
 										<label for="curier" class="nameInput nameInput_width">Курьером по Киеву</label>
 									</div>
@@ -98,6 +99,7 @@
 									</div>
 								</div>
 							</div>
+							<div class="block_thanks js_block_thanks">Благодарим за покупку!!</div>
 						</form>
 					</div>
 					<button class="blogDesktop1Button buttonBuyPage js_buttonBuy">НУ ДАВАЙТЕ ЖЕ<img src="../image/blogKassa.png" alt="kassa" class="kassa_image-button"></button>

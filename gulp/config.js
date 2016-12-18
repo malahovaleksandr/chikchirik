@@ -3,10 +3,11 @@ module.exports = {
         jade: {
             srcIndex:'resourse/jade/index.jade',
             distIndex: 'public',
-            srcWatch: 'resourse/jade/*.jade',
+            srcWatch: ['resourse/jade/*.jade', 'resourse/jade/add/*.jade'],
             srcWatchAdd: 'resourse/jade/add/*.jade',
             src: 'resourse/jade/*.jade',
             dist: 'public/page'
+
         },
         scss: {
             src: 'resourse/scss/main.scss',
@@ -15,6 +16,7 @@ module.exports = {
         js: {
             src: 'resourse/js/*.js',
             src2page: 'resourse/js/2page/*.js',
+            srcAuthoriz: 'resourse/js/authorizationPage/*.js',
             srcBuy: 'resourse/js/Buypage/*.js',
             dist: 'public/js/'
 
